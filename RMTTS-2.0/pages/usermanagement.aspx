@@ -29,7 +29,7 @@
 	</head>
 	<body>
 		<form id="form1" runat="server">
-		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+			<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 			<div class="android-header mdl-layout__header mdl-layout__header--waterfall">
 				<div class="mdl-layout__header-row">
 					<span class="android-title mdl-layout-title">
@@ -73,139 +73,135 @@
 			</div>
 			<!--content section -->
 			<div class="android-content mdl-layout__content">
-			<a name="top page"></a>
-			<div class="android-more-section">
-				<div class="android-section-title mdl-typography--display-1-color-contrast">จัดการข้อมูลบุคคล</div>       
-				<div class="android-card-container mdl-grid">
-					<!--start cell-->
-					<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-						<div class="mdl-card__title">
-							<h4 class="mdl-card__title-text">รายชื่อ</h4>
-						</div>
-						<div class="mdl-card__supporting-text">
-							<asp:SqlDataSource ID="SqlDS_staff" runat="server" ConnectionString="<%$ ConnectionStrings:RMTTSConnectionString %>" SelectCommand="SELECT * FROM tb_staff" DeleteCommand="DELETE FROM [tb_staff] WHERE [staff_id] = @staff_id" InsertCommand="INSERT INTO [tb_staff] ([staff_id], [staff_title], [staff_firstname], [staff_lastname], [staff_address], [staff_tel], [staff_email], [staff_role]) VALUES (@staff_id, @staff_title, @staff_firstname, @staff_lastname, @staff_address, @staff_tel, @staff_email, @staff_role)" UpdateCommand="UPDATE [tb_staff] SET [staff_title] = @staff_title, [staff_firstname] = @staff_firstname, [staff_lastname] = @staff_lastname, [staff_address] = @staff_address, [staff_tel] = @staff_tel, [staff_email] = @staff_email, [staff_role] = @staff_role WHERE [staff_id] = @staff_id">
-								<DeleteParameters>
-									<asp:Parameter Name="staff_id" />
-								</DeleteParameters>
-								<InsertParameters>
-									<asp:Parameter Name="staff_id" />
-									<asp:Parameter Name="staff_title" />
-									<asp:Parameter Name="staff_firstname" />
-									<asp:Parameter Name="staff_lastname" />
-									<asp:Parameter Name="staff_address" />
-									<asp:Parameter Name="staff_tel" />
-									<asp:Parameter Name="staff_email" />
-									<asp:Parameter Name="staff_role" />
-								</InsertParameters>
-								<UpdateParameters>
-									<asp:Parameter Name="staff_title" />
-									<asp:Parameter Name="staff_firstname" />
-									<asp:Parameter Name="staff_lastname" />
-									<asp:Parameter Name="staff_address" />
-									<asp:Parameter Name="staff_tel" />
-									<asp:Parameter Name="staff_email" />
-									<asp:Parameter Name="staff_role" />
-									<asp:Parameter Name="staff_id" />
-								</UpdateParameters>
-							</asp:SqlDataSource>
-							<div style=" overflow:scroll;">
-								<!--Cellpadding==ช่องว่างระหว่างบรรทัด -->
-								<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="5" DataKeyNames="staff_id" DataSourceID="SqlDS_staff" ForeColor="#333333" GridLines="None" Width="900px">
-										<AlternatingRowStyle BackColor="White" />
-										<Columns>
-											<asp:BoundField DataField="staff_id" HeaderText="รหัส" ReadOnly="True" SortExpression="staff_id"/>
-											<asp:BoundField DataField="staff_title" HeaderText="คำนำหน้า" SortExpression="staff_title"/>
-											<asp:BoundField DataField="staff_firstname" HeaderText="ชื่อ" SortExpression="staff_firstname"/>
-											<asp:BoundField DataField="staff_lastname" HeaderText="นามสกุล" SortExpression="staff_lastname"/>
-											<asp:BoundField DataField="staff_tel" HeaderText="เบอร์โทร" SortExpression="staff_tel"/>
-											<asp:BoundField DataField="staff_email" HeaderText="E-mail" SortExpression="staff_email" />
-											<asp:BoundField DataField="staff_role" HeaderText="Role" SortExpression="staff_role" />
-											<asp:TemplateField HeaderText="แก้ไข">
-										<EditItemTemplate>
-											<asp:Button ID="ButtonUpdate" runat="server" CommandName="Update"  Text="Update"  />
-											<asp:Button ID="ButtonCancel" runat="server" CommandName="Cancel"  Text="Cancel" />
-										</EditItemTemplate>
-										<ItemTemplate>
-											<asp:Button ID="ButtonEdit" runat="server" CommandName="Edit"  Text="Edit"  />
-											<asp:Button ID="ButtonDelete" runat="server" CommandName="Delete"  Text="Delete"  />	
-										</ItemTemplate>
-									</asp:TemplateField>
-
-									  </Columns>
-									  <EditRowStyle BackColor="#2461BF" />
-									  <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-									  <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-									  <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-									  <RowStyle BackColor="#EFF3FB" />
-									  <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-									  <SortedAscendingCellStyle BackColor="#F5F7FB" />
-									  <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-									  <SortedDescendingCellStyle BackColor="#E9EBEF" />
-									  <SortedDescendingHeaderStyle BackColor="#4870BE" />
-								</asp:GridView>
+				<a name="top page"></a>
+				<div class="android-more-section">
+					<div class="android-section-title mdl-typography--display-1-color-contrast">จัดการข้อมูลบุคคล</div>       
+					<div class="android-card-container mdl-grid">
+						<!--start cell-->
+						<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+							<div class="mdl-card__title">
+								<h4 class="mdl-card__title-text">รายชื่อ</h4>
 							</div>
-							<!--start card section-->
-							<!--div class="mdl-card__actions"-->
-							<a class="android-link mdl-button mdl-js-button" href="addUser.aspx">เพิ่มรายชื่อ
-							   <!-- <i class="material-icons">chevron_right</i> -->
-							</a>
-							<!--/div -->
-							<!--end of card section-->
+							
+							<div class="mdl-card__supporting-text">
+								<asp:SqlDataSource ID="SqlDS_staff" runat="server" ConnectionString="<%$ ConnectionStrings:RMTTSConnectionString %>" SelectCommand="SELECT * FROM tb_staff" DeleteCommand="DELETE FROM [tb_staff] WHERE [staff_id] = @staff_id" InsertCommand="INSERT INTO [tb_staff] ([staff_id], [staff_title], [staff_firstname], [staff_lastname], [staff_address], [staff_tel], [staff_email], [staff_role]) VALUES (@staff_id, @staff_title, @staff_firstname, @staff_lastname, @staff_address, @staff_tel, @staff_email, @staff_role)" UpdateCommand="UPDATE [tb_staff] SET [staff_title] = @staff_title, [staff_firstname] = @staff_firstname, [staff_lastname] = @staff_lastname, [staff_address] = @staff_address, [staff_tel] = @staff_tel, [staff_email] = @staff_email, [staff_role] = @staff_role WHERE [staff_id] = @staff_id">
+									<DeleteParameters>
+										<asp:Parameter Name="staff_id" />
+									</DeleteParameters>
+									<InsertParameters>
+										<asp:Parameter Name="staff_id" />
+										<asp:Parameter Name="staff_title" />
+										<asp:Parameter Name="staff_firstname" />
+										<asp:Parameter Name="staff_lastname" />
+										<asp:Parameter Name="staff_address" />
+										<asp:Parameter Name="staff_tel" />
+										<asp:Parameter Name="staff_email" />
+										<asp:Parameter Name="staff_role" />
+									</InsertParameters>
+									<UpdateParameters>
+										<asp:Parameter Name="staff_title" />
+										<asp:Parameter Name="staff_firstname" />
+										<asp:Parameter Name="staff_lastname" />
+										<asp:Parameter Name="staff_address" />
+										<asp:Parameter Name="staff_tel" />
+										<asp:Parameter Name="staff_email" />
+										<asp:Parameter Name="staff_role" />
+										<asp:Parameter Name="staff_id" />
+									</UpdateParameters>
+								</asp:SqlDataSource>
+								<div style=" overflow:scroll;">
+									<!--Cellpadding==ช่องว่างระหว่างบรรทัด -->
+									<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="5" DataKeyNames="staff_id" DataSourceID="SqlDS_staff" ForeColor="#333333" GridLines="None" Width="900px">
+											<AlternatingRowStyle BackColor="White" />
+											<Columns>
+												<asp:BoundField DataField="staff_id" HeaderText="รหัส" ReadOnly="True" SortExpression="staff_id"/>
+												<asp:BoundField DataField="staff_title" HeaderText="คำนำหน้า" SortExpression="staff_title"/>
+												<asp:BoundField DataField="staff_firstname" HeaderText="ชื่อ" SortExpression="staff_firstname"/>
+												<asp:BoundField DataField="staff_lastname" HeaderText="นามสกุล" SortExpression="staff_lastname"/>
+												<asp:BoundField DataField="staff_tel" HeaderText="เบอร์โทร" SortExpression="staff_tel"/>
+												<asp:BoundField DataField="staff_email" HeaderText="E-mail" SortExpression="staff_email" />
+												<asp:BoundField DataField="staff_role" HeaderText="Role" SortExpression="staff_role" />
+												<asp:TemplateField HeaderText="แก้ไข">
+											<EditItemTemplate>
+												<asp:Button ID="ButtonUpdate" runat="server" CommandName="Update"  Text="Update"  />
+												<asp:Button ID="ButtonCancel" runat="server" CommandName="Cancel"  Text="Cancel" />
+											</EditItemTemplate>
+											<ItemTemplate>
+												<asp:Button ID="ButtonEdit" runat="server" CommandName="Edit"  Text="Edit"  />
+												<asp:Button ID="ButtonDelete" runat="server" CommandName="Delete"  Text="Delete"  />	
+											</ItemTemplate>
+										</asp:TemplateField>
+
+										  </Columns>
+										  <EditRowStyle BackColor="#2461BF" />
+										  <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+										  <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+										  <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+										  <RowStyle BackColor="#EFF3FB" />
+										  <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+										  <SortedAscendingCellStyle BackColor="#F5F7FB" />
+										  <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+										  <SortedDescendingCellStyle BackColor="#E9EBEF" />
+										  <SortedDescendingHeaderStyle BackColor="#4870BE" />
+									</asp:GridView>
+								</div>
+								<!--add new user-->
+								<div class="mdl-card__actions">
+									<a class="android-link mdl-button mdl-js-button" href="addUser.aspx">เพิ่มรายชื่อ</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
+				<footer class="android-footer mdl-mega-footer">
+					<div class="mdl-mega-footer--top-section">
+						<div class="mdl-mega-footer--left-section">
+							<button class="mdl-mega-footer--social-btn"></button>
+							&nbsp;
+							<button class="mdl-mega-footer--social-btn"></button>
+							&nbsp;
+							<button class="mdl-mega-footer--social-btn"></button>
+						</div>
+						<div class="mdl-mega-footer--right-section">
+							<a class="mdl-typography--font-light" href="#top page">
+							Back to Top
+							<i class="material-icons">expand_less</i>
+							</a>
+						</div>
+					</div>
+
+					<div class="mdl-mega-footer--middle-section">
+						<p class="mdl-typography--font-light">Satellite imagery: © 2014 Astrium, DigitalGlobe</p>
+						<p class="mdl-typography--font-light">Some features and devices may not be available in all areas</p>
+					</div>
+
+					<div class="mdl-mega-footer--bottom-section">
+						<a class="android-link android-link-menu mdl-typography--font-light" id="version-dropdown">
+							Versions
+							<i class="material-icons">arrow_drop_up</i>
+						</a>
+						<ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="version-dropdown">
+							<li class="mdl-menu__item">5.0 Lollipop</li>
+							<li class="mdl-menu__item">4.4 KitKat</li>
+							<li class="mdl-menu__item">4.3 Jelly Bean</li>
+							<li class="mdl-menu__item">Android History</li>
+						</ul>
+						<a class="android-link android-link-menu mdl-typography--font-light" id="developers-dropdown">
+							For Developers
+							<i class="material-icons">arrow_drop_up</i>
+						</a>
+						<ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="developers-dropdown">
+							<li class="mdl-menu__item">App developer resources</li>
+							<li class="mdl-menu__item">Android Open Source Project</li>
+							<li class="mdl-menu__item">Android SDK</li>
+							<li class="mdl-menu__item">Android for Work</li>
+						</ul>
+							<a class="android-link mdl-typography--font-light" href="">Blog</a>
+							<a class="android-link mdl-typography--font-light" href="">Privacy Policy</a>
+					</div>
+				</footer>
 			</div>
-			<footer class="android-footer mdl-mega-footer">
-			  <div class="mdl-mega-footer--top-section">
-				<div class="mdl-mega-footer--left-section">
-				  <button class="mdl-mega-footer--social-btn"></button>
-				  &nbsp;
-				  <button class="mdl-mega-footer--social-btn"></button>
-				  &nbsp;
-				  <button class="mdl-mega-footer--social-btn"></button>
-				</div>
-				<div class="mdl-mega-footer--right-section">
-				  <a class="mdl-typography--font-light" href="#top page">
-					Back to Top
-					<i class="material-icons">expand_less</i>
-				  </a>
-				</div>
-			  </div>
-
-			  <div class="mdl-mega-footer--middle-section">
-				<p class="mdl-typography--font-light">Satellite imagery: © 2014 Astrium, DigitalGlobe</p>
-				<p class="mdl-typography--font-light">Some features and devices may not be available in all areas</p>
-			  </div>
-
-			  <div class="mdl-mega-footer--bottom-section">
-				<a class="android-link android-link-menu mdl-typography--font-light" id="version-dropdown">
-				  Versions
-				  <i class="material-icons">arrow_drop_up</i>
-				</a>
-				<ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="version-dropdown">
-				  <li class="mdl-menu__item">5.0 Lollipop</li>
-				  <li class="mdl-menu__item">4.4 KitKat</li>
-				  <li class="mdl-menu__item">4.3 Jelly Bean</li>
-				  <li class="mdl-menu__item">Android History</li>
-				</ul>
-				<a class="android-link android-link-menu mdl-typography--font-light" id="developers-dropdown">
-				  For Developers
-				  <i class="material-icons">arrow_drop_up</i>
-				</a>
-				<ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="developers-dropdown">
-				  <li class="mdl-menu__item">App developer resources</li>
-				  <li class="mdl-menu__item">Android Open Source Project</li>
-				  <li class="mdl-menu__item">Android SDK</li>
-				  <li class="mdl-menu__item">Android for Work</li>
-				</ul>
-				<a class="android-link mdl-typography--font-light" href="">Blog</a>
-				<a class="android-link mdl-typography--font-light" href="">Privacy Policy</a>
-			  </div>
-
-			</footer>
-			</div>
-		</div>
-		<script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+			<script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 		</form>
 	</body>
 </html>

@@ -17,3 +17,22 @@ D:\Nine_EXE\Work@PSU\ปี3เทอม3\internship\Web App\RMTTS-2.0\RMTTS-2.0
 D:\Nine_EXE\Work@PSU\ปี3เทอม3\internship\Web App\RMTTS-2.0\RMTTS-2.0\obj\Debug\RMTTS-2.0.csprojResolveAssemblyReference.cache
 D:\Nine_EXE\Work@PSU\ปี3เทอม3\internship\Web App\RMTTS-2.0\RMTTS-2.0\obj\Debug\RMTTS-2.0.dll
 D:\Nine_EXE\Work@PSU\ปี3เทอม3\internship\Web App\RMTTS-2.0\RMTTS-2.0\obj\Debug\RMTTS-2.0.pdb
+D:\JitHub\RMTTS-Web-app\RMTTS-2.0\bin\ApplicationInsights.config
+D:\JitHub\RMTTS-Web-app\RMTTS-2.0\bin\RMTTS-2.0.dll.config
+D:\JitHub\RMTTS-Web-app\RMTTS-2.0\bin\RMTTS-2.0.dll
+D:\JitHub\RMTTS-Web-app\RMTTS-2.0\bin\RMTTS-2.0.pdb
+D:\JitHub\RMTTS-Web-app\RMTTS-2.0\bin\Microsoft.AI.Agent.Intercept.dll
+D:\JitHub\RMTTS-Web-app\RMTTS-2.0\bin\Microsoft.AI.DependencyCollector.dll
+D:\JitHub\RMTTS-Web-app\RMTTS-2.0\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\JitHub\RMTTS-Web-app\RMTTS-2.0\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\JitHub\RMTTS-Web-app\RMTTS-2.0\bin\Microsoft.AI.Web.dll
+D:\JitHub\RMTTS-Web-app\RMTTS-2.0\bin\Microsoft.AI.WindowsServer.dll
+D:\JitHub\RMTTS-Web-app\RMTTS-2.0\bin\Microsoft.ApplicationInsights.dll
+D:\JitHub\RMTTS-Web-app\RMTTS-2.0\bin\Microsoft.AI.DependencyCollector.xml
+D:\JitHub\RMTTS-Web-app\RMTTS-2.0\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\JitHub\RMTTS-Web-app\RMTTS-2.0\bin\Microsoft.AI.Web.xml
+D:\JitHub\RMTTS-Web-app\RMTTS-2.0\bin\Microsoft.AI.WindowsServer.xml
+D:\JitHub\RMTTS-Web-app\RMTTS-2.0\bin\Microsoft.ApplicationInsights.xml
+D:\JitHub\RMTTS-Web-app\RMTTS-2.0\obj\Debug\RMTTS-2.0.csprojResolveAssemblyReference.cache
+D:\JitHub\RMTTS-Web-app\RMTTS-2.0\obj\Debug\RMTTS-2.0.dll
+D:\JitHub\RMTTS-Web-app\RMTTS-2.0\obj\Debug\RMTTS-2.0.pdb
