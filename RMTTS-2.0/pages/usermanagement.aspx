@@ -84,6 +84,8 @@
 							</div>
 							
 							<div class="mdl-card__supporting-text">
+								
+
 								<asp:SqlDataSource ID="SqlDS_staff" runat="server" ConnectionString="<%$ ConnectionStrings:RMTTSConnectionString %>" SelectCommand="SELECT * FROM tb_staff" DeleteCommand="DELETE FROM [tb_staff] WHERE [staff_id] = @staff_id" InsertCommand="INSERT INTO [tb_staff] ([staff_id], [staff_title], [staff_firstname], [staff_lastname], [staff_address], [staff_tel], [staff_email], [staff_role]) VALUES (@staff_id, @staff_title, @staff_firstname, @staff_lastname, @staff_address, @staff_tel, @staff_email, @staff_role)" UpdateCommand="UPDATE [tb_staff] SET [staff_title] = @staff_title, [staff_firstname] = @staff_firstname, [staff_lastname] = @staff_lastname, [staff_address] = @staff_address, [staff_tel] = @staff_tel, [staff_email] = @staff_email, [staff_role] = @staff_role WHERE [staff_id] = @staff_id">
 									<DeleteParameters>
 										<asp:Parameter Name="staff_id" />
@@ -145,6 +147,7 @@
 										  <SortedDescendingHeaderStyle BackColor="#4870BE" />
 									</asp:GridView>
 								</div>
+
 								<!--add new user-->
 								<div class="mdl-card__actions">
 									<a class="android-link mdl-button mdl-js-button" href="addUser.aspx">เพิ่มรายชื่อ</a>

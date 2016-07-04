@@ -14,6 +14,8 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.min.css">
+		<!---styles for danger button -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<!-- link to outer folder -->
 		<link rel="stylesheet" href="../styles.css">
 		<style>
@@ -27,30 +29,14 @@
 		  z-index: 900;
 		}
 		input[type=text] {
-			width: 100%;
+			width: 97%;
 			padding: 12px 20px;
 			margin: 8px 0;
 			display: inline-block;
 			border: 1px solid #ccc;
-			border-radius: 4px;
+			border-radius: 5px;
 			box-sizing: border-box;
 		}
-		
-		input[type=submit] {
-			width: 100%;
-			background-color: #4CAF50;
-			color: white;
-			padding: 14px 20px;
-			margin: 8px 0;
-			border: none;
-			border-radius: 4px;
-			cursor: pointer;
-		}
-		input[type=submit]:hover {
-			background-color: #45a049;
-		}
-		
-		
 		</style>
 	</head>
 	<body>
@@ -93,19 +79,38 @@
 							<div class="mdl-card__title">
 								<h4 class="mdl-card__title-text">ลงทะเบียน</h4>
 							</div>
-							
 							<div class="android-frame">
-								
-								<label for="fname">ชื่อ</label>
-								<input type="text" id="fname" name="firstname">
-
-								<label for="lname">นามสกุล</label>
-								<input type="text" id="lname" name="lastname">
-
-				
-
-								<input type="submit" value="Submit">
-								
+								รหัสพนักงาน<br />
+                                <asp:TextBox ID="txt_staffid" runat="server" placeholder="Staff ID"></asp:TextBox>
+                                <br />
+								<br />
+								คำนำหน้า<br />
+                                <asp:TextBox ID="txt_title" runat="server" placeholder="Title"></asp:TextBox>
+                                <br />
+								<br />
+								ชื่อ<br />
+                                <asp:TextBox ID="txt_firstname" runat="server" placeholder="First Name"></asp:TextBox>
+								<br />
+								<br />
+								นามสกุล<br />
+                                <asp:TextBox ID="txt_lastname" runat="server" placeholder="Last Name"></asp:TextBox>
+                                <br />
+								<br />
+								เบอร์โทร<br />
+                                <asp:TextBox ID="txt_tel" runat="server" placeholder="Telephone number"></asp:TextBox>
+                                <br />
+								<br />
+								อีเมล์<br />
+                                <asp:TextBox ID="txt_email" runat="server" placeholder="E-Mail"></asp:TextBox>
+                                <br />
+								<br />
+								สิทธิ์การเข้าถึง<br />
+                                <asp:TextBox ID="txt_role" runat="server" placeholder="Role"></asp:TextBox>
+                                <br />
+                                <br />
+								<asp:button class="btn btn-success" runat="server" Text="เพิ่มรายชื่อ" OnClick="bt_adduser_ok"/>
+								<asp:button class="btn btn-danger" runat="server" Text="ยกเลิก" OnClick="bt_adduser_cancel"/>
+	
 							</div>
 
 						</div>
