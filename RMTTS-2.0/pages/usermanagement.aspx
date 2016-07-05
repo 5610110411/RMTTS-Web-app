@@ -127,8 +127,8 @@
 													<asp:Button class="btn btn-danger" ID="ButtonCancel" runat="server" CommandName="Cancel"  Text="Cancel" />
 												</EditItemTemplate>
 												<ItemTemplate>
-													<asp:Button class="btn btn-success" ID="ButtonEdit" runat="server" CommandName="Edit"  Text="Edit"/>
-													<asp:Button class="btn btn-danger" ID="ButtonDelete" runat="server" CommandName="Delete"  Text="Delete"/>	
+													<asp:Button class="btn btn-success" ID="ButtonEdit" runat="server" CommandName="Edit"  Text="Edit" width="62" height="37"/>
+													<asp:Button class="btn btn-danger" ID="ButtonDelete" runat="server" CommandName="Delete"  Text="Delete" width="62" height="37"/>	
 												</ItemTemplate>
 											</asp:TemplateField>
 

@@ -110,7 +110,7 @@
           <div class="logo-font android-slogan">Open And Challenge</div>
           <div class="logo-font android-sub-slogan">Welcome to Raw Material Transportation Tracking System</div>
           <div class="logo-font android-create-character">
-            <a href=""><img src="images/andy.png"> create your android character</a>
+            <a href=""><img src="images/andy.png"> ตรวจสอบการขนส่งวัตถุดิบ</a>
           </div>
 
           <a href="#screens">
