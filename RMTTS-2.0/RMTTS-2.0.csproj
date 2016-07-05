@@ -98,6 +98,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="pages\addcar.aspx" />
     <Content Include="pages\addUser.aspx" />
     <Content Include="pages\carmanagement.aspx" />
     <Content Include="pages\usermanagement.aspx" />
@@ -108,6 +109,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="pages\addcar.aspx.cs">
+      <DependentUpon>addcar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\addcar.aspx.designer.cs">
+      <DependentUpon>addcar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pages\addUser.aspx.cs">
       <DependentUpon>addUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

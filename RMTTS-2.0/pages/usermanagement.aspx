@@ -86,7 +86,7 @@
 								<div class="mdl-card__supporting-text">
 									
 
-									<asp:SqlDataSource ID="SqlDS_staff" runat="server" ConnectionString="<%$ ConnectionStrings:RMTTSConnectionString %>" SelectCommand="SELECT * FROM tb_staff" DeleteCommand="DELETE FROM [tb_staff] WHERE [staff_id] = @staff_id" InsertCommand="INSERT INTO [tb_staff] ([staff_id], [staff_title], [staff_firstname], [staff_lastname], [staff_address], [staff_tel], [staff_email], [staff_role]) VALUES (@staff_id, @staff_title, @staff_firstname, @staff_lastname, @staff_address, @staff_tel, @staff_email, @staff_role)" UpdateCommand="UPDATE [tb_staff] SET [staff_title] = @staff_title, [staff_firstname] = @staff_firstname, [staff_lastname] = @staff_lastname, [staff_address] = @staff_address, [staff_tel] = @staff_tel, [staff_email] = @staff_email, [staff_role] = @staff_role WHERE [staff_id] = @staff_id">
+									<asp:SqlDataSource ID="SqlDS_staff" runat="server" ConnectionString="<%$ ConnectionStrings:RMTTSConnectionString %>" SelectCommand="SELECT * FROM tb_staff" DeleteCommand="DELETE FROM [tb_staff] WHERE [staff_id] = @staff_id" InsertCommand="INSERT INTO [tb_staff] ([staff_id], [staff_title], [staff_firstname], [staff_lastname], [staff_tel], [staff_email], [staff_role]) VALUES (@staff_id, @staff_title, @staff_firstname, @staff_lastname, @staff_tel, @staff_email, @staff_role)" UpdateCommand="UPDATE [tb_staff] SET [staff_title] = @staff_title, [staff_firstname] = @staff_firstname, [staff_lastname] = @staff_lastname, [staff_tel] = @staff_tel, [staff_email] = @staff_email, [staff_role] = @staff_role WHERE [staff_id] = @staff_id">
 										<DeleteParameters>
 											<asp:Parameter Name="staff_id" />
 										</DeleteParameters>
@@ -95,7 +95,6 @@
 											<asp:Parameter Name="staff_title" />
 											<asp:Parameter Name="staff_firstname" />
 											<asp:Parameter Name="staff_lastname" />
-											<asp:Parameter Name="staff_address" />
 											<asp:Parameter Name="staff_tel" />
 											<asp:Parameter Name="staff_email" />
 											<asp:Parameter Name="staff_role" />
@@ -104,7 +103,6 @@
 											<asp:Parameter Name="staff_title" />
 											<asp:Parameter Name="staff_firstname" />
 											<asp:Parameter Name="staff_lastname" />
-											<asp:Parameter Name="staff_address" />
 											<asp:Parameter Name="staff_tel" />
 											<asp:Parameter Name="staff_email" />
 											<asp:Parameter Name="staff_role" />
@@ -116,7 +114,7 @@
 										<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="5" DataKeyNames="staff_id" DataSourceID="SqlDS_staff" ForeColor="#333333" GridLines="None" Width="900px">
 												<AlternatingRowStyle BackColor="White" />
 												<Columns>
-													<asp:BoundField DataField="staff_id" HeaderText="รหัส" ReadOnly="True" SortExpression="staff_id"/>
+													<asp:BoundField DataField="staff_id" HeaderText="รหัส" ReadOnly="False" SortExpression="staff_id"/>
 													<asp:BoundField DataField="staff_title" HeaderText="คำนำหน้า" SortExpression="staff_title"/>
 													<asp:BoundField DataField="staff_firstname" HeaderText="ชื่อ" SortExpression="staff_firstname"/>
 													<asp:BoundField DataField="staff_lastname" HeaderText="นามสกุล" SortExpression="staff_lastname"/>
@@ -125,12 +123,12 @@
 													<asp:BoundField DataField="staff_role" HeaderText="Role" SortExpression="staff_role" />
 													<asp:TemplateField HeaderText="แก้ไข">
 												<EditItemTemplate>
-													<asp:Button ID="ButtonUpdate" runat="server" CommandName="Update"  Text="Update"  />
-													<asp:Button ID="ButtonCancel" runat="server" CommandName="Cancel"  Text="Cancel" />
+													<asp:Button class="btn btn-success" ID="ButtonUpdate" runat="server" CommandName="Update"  Text="Update" />
+													<asp:Button class="btn btn-danger" ID="ButtonCancel" runat="server" CommandName="Cancel"  Text="Cancel" />
 												</EditItemTemplate>
 												<ItemTemplate>
-													<asp:Button ID="ButtonEdit" runat="server" CommandName="Edit"  Text="Edit"  />
-													<asp:Button ID="ButtonDelete" runat="server" CommandName="Delete"  Text="Delete"  />	
+													<asp:Button class="btn btn-success" ID="ButtonEdit" runat="server" CommandName="Edit"  Text="Edit"/>
+													<asp:Button class="btn btn-danger" ID="ButtonDelete" runat="server" CommandName="Delete"  Text="Delete"/>	
 												</ItemTemplate>
 											</asp:TemplateField>
 

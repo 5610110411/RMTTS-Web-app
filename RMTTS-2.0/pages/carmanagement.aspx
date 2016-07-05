@@ -81,7 +81,7 @@
 						<!--start cell-->
 						<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
 							<div class="mdl-card__title">
-								<h4 class="mdl-card__title-text">รายชื่อ</h4>
+								<h4 class="mdl-card__title-text">ข้อมูลพาหนะทั้งหมด</h4>
 							</div>
 							
 							<div class="mdl-card__supporting-text">
@@ -115,12 +115,12 @@
 												<asp:BoundField DataField="vehicle_number" HeaderText="เลขข้างรถ" SortExpression="vehicle_number"/>
 												<asp:TemplateField HeaderText="แก้ไข">
 											<EditItemTemplate>
-												<asp:Button ID="ButtonUpdate" runat="server" CommandName="Update"  Text="Update"  />
-												<asp:Button ID="ButtonCancel" runat="server" CommandName="Cancel"  Text="Cancel" />
+												<asp:Button class="btn btn-success" ID="ButtonUpdate" runat="server" CommandName="Update"  Text="Update"  />
+												<asp:Button class="btn btn-danger" ID="ButtonCancel" runat="server" CommandName="Cancel"  Text="Cancel" />
 											</EditItemTemplate>
 											<ItemTemplate>
-												<asp:Button ID="ButtonEdit" runat="server" CommandName="Edit"  Text="Edit"  />
-												<asp:Button ID="ButtonDelete" runat="server" CommandName="Delete"  Text="Delete"  />	
+												<asp:Button class="btn btn-success" ID="ButtonEdit" runat="server" CommandName="Edit"  Text="Edit"  />
+												<asp:Button class="btn btn-danger" ID="ButtonDelete" runat="server" CommandName="Delete"  Text="Delete"  />	
 											</ItemTemplate>
 										</asp:TemplateField>
 
@@ -140,7 +140,7 @@
 
 								<!--add new user-->
 								<div class="mdl-card__actions">
-									<a class="android-link mdl-button mdl-js-button" href="addUser.aspx">เพิ่มรายชื่อ</a>
+									<a class="android-link mdl-button mdl-js-button" href="addUser.aspx">เพิ่มข้อมูล</a>
 								</div>
 							</div>
 						</div>
