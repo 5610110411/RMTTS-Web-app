@@ -49,6 +49,15 @@ namespace RMTTS_2._0.pages {
         protected global::System.Web.UI.WebControls.TextBox txt_firstname;
         
         /// <summary>
+        /// req_firstname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator req_firstname;
+        
+        /// <summary>
         /// txt_lastname control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,15 @@ namespace RMTTS_2._0.pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_lastname;
+        
+        /// <summary>
+        /// req_lastname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator req_lastname;
         
         /// <summary>
         /// txt_tel control.
@@ -83,5 +101,14 @@ namespace RMTTS_2._0.pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_role;
+        
+        /// <summary>
+        /// req_role control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator req_role;
     }
 }

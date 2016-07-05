@@ -81,20 +81,21 @@
 								</div>
 								<div class="android-frame">
 									รหัสพนักงาน<br />
-									<asp:TextBox ID="txt_staffid" runat="server" placeholder="Staff ID" required></asp:TextBox>
-									<br />
+									<asp:TextBox ID="txt_staffid" runat="server" placeholder="Staff ID"></asp:TextBox>
+									<asp:RequiredFieldValidator ID="req_staffid" runat="server" ControlToValidate="txt_staffid" ErrorMessage="กรุณากรอกข้อมูล&quot;รหัสพนักงาน&quot;" ForeColor="Red"></asp:RequiredFieldValidator>
 									<br />
 									คำนำหน้า<br />
-									<asp:TextBox ID="txt_title" runat="server" placeholder="Title" required></asp:TextBox>
-									<br />
+									<asp:TextBox ID="txt_title" runat="server" placeholder="Title"></asp:TextBox>
+									<asp:RequiredFieldValidator ID="req_title" runat="server" ControlToValidate="txt_title" ErrorMessage="กรุณากรอกข้อมูล&quot;คำนำหน้า&quot;" ForeColor="Red"></asp:RequiredFieldValidator>
 									<br />
 									ชื่อ<br />
-									<asp:TextBox ID="txt_firstname" runat="server" placeholder="First Name" required></asp:TextBox>
+									<asp:TextBox ID="txt_firstname" runat="server" placeholder="First Name"></asp:TextBox>
 									<br />
+									<asp:RequiredFieldValidator ID="req_firstname" runat="server" ControlToValidate="txt_firstname" ErrorMessage="กรุณากรอกข้อมูล&quot;ชื่อ&quot;" ForeColor="Red"></asp:RequiredFieldValidator>
 									<br />
 									นามสกุล<br />
-									<asp:TextBox ID="txt_lastname" runat="server" placeholder="Last Name" required></asp:TextBox>
-									<br />
+									<asp:TextBox ID="txt_lastname" runat="server" placeholder="Last Name"></asp:TextBox>
+									<asp:RequiredFieldValidator ID="req_lastname" runat="server" ControlToValidate="txt_lastname" ErrorMessage="กรุณากรอกข้อมูล&quot;นามสกุล&quot;" ForeColor="Red"></asp:RequiredFieldValidator>
 									<br />
 									เบอร์โทร<br />
 									<asp:TextBox ID="txt_tel" runat="server" placeholder="Telephone number"></asp:TextBox>
@@ -105,11 +106,12 @@
 									<br />
 									<br />
 									สิทธิ์การเข้าถึง<br />
-									<asp:TextBox ID="txt_role" runat="server" placeholder="Role" required></asp:TextBox>
+									<asp:TextBox ID="txt_role" runat="server" placeholder="Role"></asp:TextBox>
 									<br />
+									<asp:RequiredFieldValidator ID="req_role" runat="server" ControlToValidate="txt_role" ErrorMessage="กรุณากรอกข้อมูล&quot;สิทธิ์การเข้าถึง&quot;" ForeColor="Red"></asp:RequiredFieldValidator>
 									<br />
 									<asp:button class="btn btn-success" runat="server" Text="เพิ่มรายชื่อ" OnClick="bt_adduser_ok"/>
-									<asp:button class="btn btn-danger" runat="server" Text="ยกเลิก" OnClick="bt_adduser_cancel"/>
+									<asp:button class="btn btn-danger" runat="server" Text="ยกเลิก" OnClick="bt_adduser_cancel" CausesValidation="false"/>
 		
 								</div>
 
