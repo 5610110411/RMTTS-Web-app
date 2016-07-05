@@ -58,7 +58,7 @@
 							<nav class="android-navigation mdl-navigation">
 								<a class="mdl-navigation__link" href="../RMTTS.aspx">เริ่มต้น</a>
 								<a class="mdl-navigation__link" href="">ค้นหาข้อมูล</a>
-								<a class="mdl-navigation__link" href="usermanagement.aspx">จัดการข้อมูลผู้ใช้</a>
+								<a class="mdl-navigation__link" href="usermanagement.aspx">จัดการข้อมูลบุคคล</a>
 								<a class="mdl-navigation__link" href="">จัดการข้อมูลรถ</a>
 								<a class="mdl-navigation__link" href="">สอบถาม</a>
 							</nav>

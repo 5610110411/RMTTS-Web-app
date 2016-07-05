@@ -31,6 +31,15 @@ namespace RMTTS_2._0.pages {
         protected global::System.Web.UI.WebControls.TextBox txt_staffid;
         
         /// <summary>
+        /// req_staffid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator req_staffid;
+        
+        /// <summary>
         /// txt_title control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace RMTTS_2._0.pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_title;
+        
+        /// <summary>
+        /// req_title control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator req_title;
         
         /// <summary>
         /// txt_firstname control.

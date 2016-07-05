@@ -52,8 +52,8 @@
 							<nav class="android-navigation mdl-navigation">
 								<a class="mdl-navigation__link" href="../RMTTS.aspx">เริ่มต้น</a>
 								<a class="mdl-navigation__link" href="">ค้นหาข้อมูล</a>
-								<a class="mdl-navigation__link" href="usermanagement.aspx">จัดการข้อมูลผู้ใช้</a>
-								<a class="mdl-navigation__link" href="">จัดการข้อมูลรถ</a>
+								<a class="mdl-navigation__link" href="usermanagement.aspx">จัดการข้อมูลบุคคล</a>
+								<a class="mdl-navigation__link" href="carmanagement.aspx">จัดการข้อมูลรถ</a>
 								<a class="mdl-navigation__link" href="">สอบถาม</a>
 							</nav>
 						</div>
@@ -80,7 +80,7 @@
 							<!--start cell-->
 							<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
 								<div class="mdl-card__title">
-									<h4 class="mdl-card__title-text">รายชื่อ</h4>
+									<h4 class="mdl-card__title-text">ข้อมูลบุคคลทั้งหมด</h4>
 								</div>
 								
 								<div class="mdl-card__supporting-text">
