@@ -29,7 +29,9 @@ a img{
 	background-color: #f2f2f2;
 	padding: 10px;
 	/*border: 20px solid red;*/
-	margin: 20px;
+	/*margin: 20px;*/
+	margin: auto;
+	text-align: center;
 }
 
 .btn-danger {

@@ -51,7 +51,7 @@
           <div class="android-navigation-container">
             <nav class="android-navigation mdl-navigation">
               <a class="mdl-navigation__link" href="RMTTS.aspx">เริ่มต้น</a>
-              <a class="mdl-navigation__link" href="">ค้นหาข้อมูล</a>
+              <a class="mdl-navigation__link" href="pages/transport.aspx">ค้นหาข้อมูล</a>
               <a class="mdl-navigation__link" href="pages/usermanagement.aspx">จัดการข้อมูลบุคคล</a>
               <a class="mdl-navigation__link" href="pages/carmanagement.aspx">จัดการข้อมูลรถ</a>
               <a class="mdl-navigation__link" href="">สอบถาม</a>
@@ -64,10 +64,7 @@
             <i class="material-icons">more_vert</i>
           </button>
           <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
-            <li class="mdl-menu__item">5.0 Lollipop</li>
-            <li class="mdl-menu__item">4.4 KitKat</li>
-            <li disabled class="mdl-menu__item">4.3 Jelly Bean</li>
-            <li class="mdl-menu__item">Android History</li>
+            <li class="mdl-menu__item">Log Out</li>
           </ul>
         </div>
       </div>
@@ -110,7 +107,7 @@
           <div class="logo-font android-slogan">Open And Challenge</div>
           <div class="logo-font android-sub-slogan">Welcome to Raw Material Transportation Tracking System</div>
           <div class="logo-font android-create-character">
-            <a href=""><img src="images/andy.png"> ตรวจสอบการขนส่งวัตถุดิบ</a>
+            <a href="pages/transport.aspx"><img src="images/andy.png"> ตรวจสอบการขนส่งวัตถุดิบ</a>
           </div>
 
           <a href="#screens">
@@ -122,14 +119,14 @@
         
 
         <div class="android-more-section">
-          <div class="android-section-title mdl-typography--display-1-color-contrast">More from Android</div>
+          <div class="android-section-title mdl-typography--display-1-color-contrast">Management</div>
           <div class="android-card-container mdl-grid">
             <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
               <div class="mdl-card__media">
-                <img src="images/more-from-1.png">
+                <img src="images/atlas@2x.png">
               </div>
               <div class="mdl-card__title">
-                 <h4 class="mdl-card__title-text">Get going on Android</h4>
+                 <h4 class="mdl-card__title-text">Station</h4>
               </div>
               <div class="mdl-card__supporting-text">
                 <span class="mdl-typography--font-light mdl-typography--subhead">Four tips to make your switch to Android quick and easy</span>
@@ -144,10 +141,10 @@
 
             <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
               <div class="mdl-card__media">
-                <img src="images/more-from-4.png">
+                <img src="images/user@2x.png">
               </div>
               <div class="mdl-card__title">
-                 <h4 class="mdl-card__title-text">Create your own Android character</h4>
+                 <h4 class="mdl-card__title-text">User</h4>
               </div>
               <div class="mdl-card__supporting-text">
                 <span class="mdl-typography--font-light mdl-typography--subhead">Turn the little green Android mascot into you, your friends, anyone!</span>
@@ -162,10 +159,10 @@
 
             <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
               <div class="mdl-card__media">
-                <img src="images/more-from-2.png">
+                <img src="images/truck@2x.png">
               </div>
               <div class="mdl-card__title">
-                 <h4 class="mdl-card__title-text">Get a clean customisable home screen</h4>
+                 <h4 class="mdl-card__title-text">Vehicle</h4>
               </div>
               <div class="mdl-card__supporting-text">
                 <span class="mdl-typography--font-light mdl-typography--subhead">A clean, simple, customisable home screen that comes with the power of Google Now: Traffic alerts, weather and much more, just a swipe away.</span>
@@ -180,10 +177,10 @@
 
             <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
               <div class="mdl-card__media">
-                <img src="images/more-from-3.png">
+                <img src="images/bag@2x.png">
               </div>
               <div class="mdl-card__title">
-                 <h4 class="mdl-card__title-text">Millions to choose from</h4>
+                 <h4 class="mdl-card__title-text">Material</h4>
               </div>
               <div class="mdl-card__supporting-text">
                 <span class="mdl-typography--font-light mdl-typography--subhead">Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your Android device uniquely yours.</span>
@@ -216,7 +213,7 @@
           </div>
 
           <div class="mdl-mega-footer--middle-section">
-            <p class="mdl-typography--font-light">Satellite imagery: © 2014 Astrium, DigitalGlobe</p>
+            <p class="mdl-typography--font-light">Developer: Ninez Manas</p>
             <p class="mdl-typography--font-light">Some features and devices may not be available in all areas</p>
           </div>
 

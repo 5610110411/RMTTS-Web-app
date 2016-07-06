@@ -57,7 +57,7 @@
 						<div class="android-navigation-container">
 							<nav class="android-navigation mdl-navigation">
 								<a class="mdl-navigation__link" href="../RMTTS.aspx">เริ่มต้น</a>
-								<a class="mdl-navigation__link" href="">ค้นหาข้อมูล</a>
+								<a class="mdl-navigation__link" href="transport.aspx">ค้นหาข้อมูล</a>
 								<a class="mdl-navigation__link" href="usermanagement.aspx">จัดการข้อมูลบุคคล</a>
 								<a class="mdl-navigation__link" href="carmanagement.aspx">จัดการข้อมูลรถ</a>
 								<a class="mdl-navigation__link" href="">สอบถาม</a>
@@ -98,10 +98,12 @@
 									<br />
 									<asp:button class="btn btn-success" runat="server" Text="เพิ่มข้อมูล" OnClick="bt_addcar_ok" ID="bt_addcar_okk"/>
 									<asp:button class="btn btn-danger" runat="server" Text="ยกเลิก" OnClick="bt_addcar_cancel" CausesValidation="false" ID="bt_addcar_cancell"/>
-		
+									<br />
 								</div>
+			
 							</div>
 						</div>
+						
 					</div>
 					<footer class="android-footer mdl-mega-footer">
 						<div class="mdl-mega-footer--top-section">
@@ -121,7 +123,7 @@
 						</div>
 
 						<div class="mdl-mega-footer--middle-section">
-							<p class="mdl-typography--font-light">Satellite imagery: © 2014 Astrium, DigitalGlobe</p>
+							<p class="mdl-typography--font-light">Developer: Ninez Manas</p>
 							<p class="mdl-typography--font-light">Some features and devices may not be available in all areas</p>
 						</div>
 
