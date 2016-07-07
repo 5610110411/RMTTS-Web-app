@@ -52,8 +52,7 @@
             <nav class="android-navigation mdl-navigation">
               <a class="mdl-navigation__link" href="RMTTS.aspx">เริ่มต้น</a>
               <a class="mdl-navigation__link" href="pages/transport.aspx">ค้นหาข้อมูล</a>
-              <a class="mdl-navigation__link" href="pages/usermanagement.aspx">จัดการข้อมูลบุคคล</a>
-              <a class="mdl-navigation__link" href="pages/carmanagement.aspx">จัดการข้อมูลรถ</a>
+              <a class="mdl-navigation__link" href="#management">จัดการข้อมูล</a>
               <a class="mdl-navigation__link" href="">สอบถาม</a>
             </nav>
           </div>
@@ -76,27 +75,16 @@
             <img class="android-logo-image" src="images/scg-logo-white.png"> 
         </span>
         <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="">เริ่มต้น</a>
-          <a class="mdl-navigation__link" href="">ค้นหาข้อมูล</a>
-          <a class="mdl-navigation__link" href="">จัดการข้อมูลบุคคล</a>
-          <a class="mdl-navigation__link" href="">จัดการข้อมูลรถ</a>
-          <a class="mdl-navigation__link" href="">สอบถาม</a>
-          <div class="android-drawer-separator"></div>
-          <span class="mdl-navigation__link" href="">Versions</span>
-          <a class="mdl-navigation__link" href="">Lollipop 5.0</a>
-          <a class="mdl-navigation__link" href="">KitKat 4.4</a>
-          <a class="mdl-navigation__link" href="">Jelly Bean 4.3</a>
-          <a class="mdl-navigation__link" href="">Android history</a>
-          <div class="android-drawer-separator"></div>
-          <span class="mdl-navigation__link" href="">Resources</span>
-          <a class="mdl-navigation__link" href="">Official blog</a>
-          <a class="mdl-navigation__link" href="">Android on Google+</a>
-          <a class="mdl-navigation__link" href="">Android on Twitter</a>
-          <div class="android-drawer-separator"></div>
-          <span class="mdl-navigation__link" href="">For developers</span>
-          <a class="mdl-navigation__link" href="">App developer resources</a>
-          <a class="mdl-navigation__link" href="">Android Open Source Project</a>
-          <a class="mdl-navigation__link" href="">Android SDK</a>
+			<a class="mdl-navigation__link" href="RMTTS.aspx">เริ่มต้น</a>
+			<a class="mdl-navigation__link" href="pages/transport.aspx">ค้นหาข้อมูล</a>
+			<a class="mdl-navigation__link" href="#management">จัดการข้อมูล</a>
+			<a class="mdl-navigation__link" href="">สอบถาม</a>
+			<div class="android-drawer-separator"></div>
+			<span class="mdl-navigation__link" href="">Developer</span>
+			<a class="mdl-navigation__link" href="https://www.facebook.com/Ninepcento">Ninez Manas</a>
+			<div class="android-drawer-separator"></div>
+			<span class="mdl-navigation__link" href="">Project Adviser</span>
+			<a class="mdl-navigation__link" href="">Pattra Shaowkrungkao</a>
         </nav>
       </div>
       <!--end of left bar image-->
@@ -107,10 +95,10 @@
           <div class="logo-font android-slogan">Open And Challenge</div>
           <div class="logo-font android-sub-slogan">Welcome to Raw Material Transportation Tracking System</div>
           <div class="logo-font android-create-character">
-            <a href="pages/transport.aspx"><img src="images/andy.png"> ตรวจสอบการขนส่งวัตถุดิบ</a>
+            <a href="pages/transport.aspx"><img src="images/search.png"> ตรวจสอบการขนส่งวัตถุดิบ</a>
           </div>
 
-          <a href="#screens">
+          <a href="#management">
             <button class="android-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
               <i class="material-icons">expand_more</i>
             </button>
@@ -118,7 +106,7 @@
         </div>
         
 
-        <div class="android-more-section">
+        <div class="android-more-section" ID = "management">
           <div class="android-section-title mdl-typography--display-1-color-contrast">Management</div>
           <div class="android-card-container mdl-grid">
             <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
@@ -129,11 +117,11 @@
                  <h4 class="mdl-card__title-text">Station</h4>
               </div>
               <div class="mdl-card__supporting-text">
-                <span class="mdl-typography--font-light mdl-typography--subhead">Four tips to make your switch to Android quick and easy</span>
+                <span class="mdl-typography--font-light mdl-typography--subhead">จัดการข้อมูลที่ตั้งแหล่งวัตถุดิบ & สถานีปลายทาง</span>
               </div>
               <div class="mdl-card__actions">
                  <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-                   Make the switch
+                   More
                    <i class="material-icons">chevron_right</i>
                  </a>
               </div>
@@ -147,11 +135,11 @@
                  <h4 class="mdl-card__title-text">User</h4>
               </div>
               <div class="mdl-card__supporting-text">
-                <span class="mdl-typography--font-light mdl-typography--subhead">Turn the little green Android mascot into you, your friends, anyone!</span>
+                <span class="mdl-typography--font-light mdl-typography--subhead">จัดการข้อมูลผู้ใช้งานระบบ</span>
               </div>
               <div class="mdl-card__actions">
-                 <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-                   androidify.com
+                 <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="pages/usermanagement.aspx">
+                   More
                    <i class="material-icons">chevron_right</i>
                  </a>
               </div>
@@ -165,11 +153,11 @@
                  <h4 class="mdl-card__title-text">Vehicle</h4>
               </div>
               <div class="mdl-card__supporting-text">
-                <span class="mdl-typography--font-light mdl-typography--subhead">A clean, simple, customisable home screen that comes with the power of Google Now: Traffic alerts, weather and much more, just a swipe away.</span>
+                <span class="mdl-typography--font-light mdl-typography--subhead">จัดการข้อมูลรถ</span>
               </div>
               <div class="mdl-card__actions">
-                 <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-                   Download now
+                 <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="pages/carmanagement.aspx">
+                   More
                    <i class="material-icons">chevron_right</i>
                  </a>
               </div>
@@ -183,11 +171,11 @@
                  <h4 class="mdl-card__title-text">Material</h4>
               </div>
               <div class="mdl-card__supporting-text">
-                <span class="mdl-typography--font-light mdl-typography--subhead">Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your Android device uniquely yours.</span>
+                <span class="mdl-typography--font-light mdl-typography--subhead">จัดการข้อมูลวัตถุดิบที่ขนส่ง</span>
               </div>
               <div class="mdl-card__actions">
                  <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-                   Find apps
+                   More
                    <i class="material-icons">chevron_right</i>
                  </a>
               </div>

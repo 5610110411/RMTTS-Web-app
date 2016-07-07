@@ -22,22 +22,40 @@ namespace RMTTS_2._0.pages {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// txt_vehicle_id control.
+        /// txt_tp_vehicle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_vehicle_id;
+        protected global::System.Web.UI.WebControls.TextBox txt_tp_vehicle;
         
         /// <summary>
-        /// req_vehicle_id control.
+        /// txt_tp_material control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator req_vehicle_id;
+        protected global::System.Web.UI.WebControls.TextBox txt_tp_material;
+        
+        /// <summary>
+        /// txt_tp_from control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_tp_from;
+        
+        /// <summary>
+        /// txt_tp_to control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_tp_to;
         
         /// <summary>
         /// txt_vehicle_type control.
@@ -47,42 +65,6 @@ namespace RMTTS_2._0.pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_vehicle_type;
-        
-        /// <summary>
-        /// req_vehicle_type control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator req_vehicle_type;
-        
-        /// <summary>
-        /// txt_legalweight control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_legalweight;
-        
-        /// <summary>
-        /// req_legalweight control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator req_legalweight;
-        
-        /// <summary>
-        /// txt_vehicle_number control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_vehicle_number;
         
         /// <summary>
         /// SqlDS_staff control.
