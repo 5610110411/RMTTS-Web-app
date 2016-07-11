@@ -1,2 +1,2 @@
 # RMTTS-Web-app
-My Intership project
+My Internship project
