@@ -13,15 +13,6 @@ namespace RMTTS_2._0.pages {
     public partial class usermanagement {
         
         /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
         /// SqlDS_staff control.
         /// </summary>
         /// <remarks>

@@ -29,6 +29,7 @@
 	</head>
 	<body>
 		<form id="form1" runat="server">
+			<!--fix header -->
 			<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 				<div class="android-header mdl-layout__header mdl-layout__header--waterfall">
 					<div class="mdl-layout__header-row">
@@ -72,18 +73,26 @@
 					</div>
 				</div>
 				<!--content section -->
-				<div class="android-content mdl-layout__content">
+				<div class="android-content mdl-layout__content" style="overflow:scroll; padding: 5px;">
 					<a name="top page"></a>
+					
+					
+
 					<div class="android-more-section">
 						<div class="android-section-title mdl-typography--display-1-color-contrast">จัดการข้อมูลบุคคล</div>       
-						<div class="android-card-container mdl-grid">
+						<!--class="android-card-container mdl-grid"ลองถอด-->
+						<div>
 							<!--start cell-->
-							<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+							<!--ตีกรอบ ก็ตรงนี้หละ-->
+							
+							<!--ลองถอด-->
+							<!--div style="overflow:scroll;"-->
 								<div class="mdl-card__title">
 									<h4 class="mdl-card__title-text">ข้อมูลบุคคลทั้งหมด</h4>
 								</div>
-								
-								<div class="mdl-card__supporting-text">
+								<!--class="mdl-card__supporting-text"ลองถอด-->
+								<!--ลองถอด-->
+								<!--div-->
 									
 
 									<asp:SqlDataSource ID="SqlDS_staff" runat="server" ConnectionString="<%$ ConnectionStrings:RMTTSConnectionString %>" SelectCommand="SELECT * FROM tb_staff" DeleteCommand="DELETE FROM [tb_staff] WHERE [staff_id] = @staff_id" InsertCommand="INSERT INTO [tb_staff] ([staff_id], [staff_title], [staff_firstname], [staff_lastname], [staff_tel], [staff_email], [staff_role]) VALUES (@staff_id, @staff_title, @staff_firstname, @staff_lastname, @staff_tel, @staff_email, @staff_role)" UpdateCommand="UPDATE [tb_staff] SET [staff_title] = @staff_title, [staff_firstname] = @staff_firstname, [staff_lastname] = @staff_lastname, [staff_tel] = @staff_tel, [staff_email] = @staff_email, [staff_role] = @staff_role WHERE [staff_id] = @staff_id">
@@ -109,7 +118,8 @@
 											<asp:Parameter Name="staff_id" />
 										</UpdateParameters>
 									</asp:SqlDataSource>
-									<div style=" overflow:scroll;">
+									<!--ลองถอด-->
+									<!--div-->
 										<!--Cellpadding==ช่องว่างระหว่างบรรทัด -->
 										<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="5" DataKeyNames="staff_id" DataSourceID="SqlDS_staff" ForeColor="#333333" GridLines="None" Width="900px">
 												<AlternatingRowStyle BackColor="White" />
@@ -133,7 +143,7 @@
 											</asp:TemplateField>
 
 											  </Columns>
-											  <EditRowStyle BackColor="#2461BF" />
+											  <EditRowStyle BackColor="#2461BF"/>
 											  <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
 											  <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
 											  <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
@@ -144,16 +154,23 @@
 											  <SortedDescendingCellStyle BackColor="#E9EBEF" />
 											  <SortedDescendingHeaderStyle BackColor="#4870BE" />
 										</asp:GridView>
-									</div>
+									<!--/div-->
 
 									<!--add new user-->
 									<div class="mdl-card__actions">
 										<a class="android-link mdl-button mdl-js-button" href="addUser.aspx">เพิ่มรายชื่อ</a>
 									</div>
-								</div>
-							</div>
+								<!--ลองถอด-->
+								<!--/div-->
+							
+							<!--/div-->
 						</div>
 					</div>
+					
+					
+					
+					
+					
 					<footer class="android-footer mdl-mega-footer">
 						<div class="mdl-mega-footer--top-section">
 							<div class="mdl-mega-footer--left-section">
@@ -166,7 +183,7 @@
 							<div class="mdl-mega-footer--right-section">
 								<a class="mdl-typography--font-light" href="#top page">
 								Back to Top
-								<i class="material-icons">expand_less</i>
+									<i class="material-icons">expand_less</i>
 								</a>
 							</div>
 						</div>

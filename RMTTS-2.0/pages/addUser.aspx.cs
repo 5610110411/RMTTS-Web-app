@@ -31,7 +31,7 @@ namespace RMTTS_2._0.pages
             */
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO tb_staff(staff_id,staff_title,staff_firstname,staff_lastname, staff_tel, staff_email, staff_role) VALUES('" + txt_staffid.Text + "', '" + txt_title.Text + "', '" + txt_firstname.Text + "', '" + txt_lastname.Text + "', '" + txt_tel.Text + "', '" + txt_email.Text + "', '" + txt_role.Text + "')", con);
+            SqlCommand cmd = new SqlCommand("INSERT INTO tb_staff(staff_id,staff_title,staff_firstname,staff_lastname, staff_tel, staff_email, staff_role) VALUES('" + txt_staffid.Text + "', '" + DropDownList_title.SelectedItem.Text + "', '" + txt_firstname.Text + "', '" + txt_lastname.Text + "', '" + txt_tel.Text + "', '" + txt_email.Text + "', '" + DropDownList_role.SelectedItem.Text + "')", con);
             int result = cmd.ExecuteNonQuery();
             con.Close();
 

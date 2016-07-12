@@ -40,22 +40,13 @@ namespace RMTTS_2._0.pages {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator req_staffid;
         
         /// <summary>
-        /// txt_title control.
+        /// DropDownList_title control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_title;
-        
-        /// <summary>
-        /// req_title control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator req_title;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList_title;
         
         /// <summary>
         /// txt_firstname control.
@@ -112,21 +103,21 @@ namespace RMTTS_2._0.pages {
         protected global::System.Web.UI.WebControls.TextBox txt_email;
         
         /// <summary>
-        /// txt_role control.
+        /// DropDownList_role control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_role;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList_role;
         
         /// <summary>
-        /// req_role control.
+        /// SqlDataSource_role control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator req_role;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource_role;
     }
 }

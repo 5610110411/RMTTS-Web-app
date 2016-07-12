@@ -26,12 +26,13 @@ a img{
 /*Gray frame for registation*/
 .android-frame {
 	border-radius: 5px;
-	background-color: #f2f2f2;
+	background-color: #FFFFFF;
 	padding: 10px;
 	/*border: 20px solid red;*/
 	/*margin: 20px;*/
 	margin: auto;
-	text-align: center;
+	/*จัดตำแหน่งข้อความ*/
+	/*text-align: center;*/
 }
 
 .btn-danger {
@@ -96,6 +97,7 @@ fieldset[disabled] .btn-danger.focus {
 
 .btn-success {
   color: #fff;
+  /*text-align: center;*/
   background-color: #5cb85c;
   border-color: #4cae4c;
   padding: 10px;
@@ -513,8 +515,8 @@ fieldset[disabled] .btn-success.focus {
 }
 
 .android-more-section {
-  padding: 80px 0;
-  max-width: 1044px;
+  padding: 100px 0;
+  max-width: 1344px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -674,5 +676,16 @@ fieldset[disabled] .btn-success.focus {
   .android-footer .mdl-mega-footer--bottom-section {
     display: none;
   }
+}
+
+.form-control {
+    height: 34px;
+	width: 100%;
+	font-size: 14px;
+	line-height: 1.42857;
+    color: rgb(85, 85, 85);
+    vertical-align: middle;
+	border-radius: 4px;
+	border-color: rgb(204, 204, 204);
 }
 
