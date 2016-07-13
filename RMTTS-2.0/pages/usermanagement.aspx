@@ -75,16 +75,12 @@
 				<!--content section -->
 				<div class="android-content mdl-layout__content" style="overflow:scroll; padding: 5px;">
 					<a name="top page"></a>
-					
-					
-
 					<div class="android-more-section">
 						<div class="android-section-title mdl-typography--display-1-color-contrast">จัดการข้อมูลบุคคล</div>       
 						<!--class="android-card-container mdl-grid"ลองถอด-->
 						<div>
 							<!--start cell-->
 							<!--ตีกรอบ ก็ตรงนี้หละ-->
-							
 							<!--ลองถอด-->
 							<!--div style="overflow:scroll;"-->
 								<div class="mdl-card__title">
@@ -93,8 +89,6 @@
 								<!--class="mdl-card__supporting-text"ลองถอด-->
 								<!--ลองถอด-->
 								<!--div-->
-									
-
 									<asp:SqlDataSource ID="SqlDS_staff" runat="server" ConnectionString="<%$ ConnectionStrings:RMTTSConnectionString %>" SelectCommand="SELECT * FROM tb_staff" DeleteCommand="DELETE FROM [tb_staff] WHERE [staff_id] = @staff_id" InsertCommand="INSERT INTO [tb_staff] ([staff_id], [staff_title], [staff_firstname], [staff_lastname], [staff_tel], [staff_email], [staff_role]) VALUES (@staff_id, @staff_title, @staff_firstname, @staff_lastname, @staff_tel, @staff_email, @staff_role)" UpdateCommand="UPDATE [tb_staff] SET [staff_title] = @staff_title, [staff_firstname] = @staff_firstname, [staff_lastname] = @staff_lastname, [staff_tel] = @staff_tel, [staff_email] = @staff_email, [staff_role] = @staff_role WHERE [staff_id] = @staff_id">
 										<DeleteParameters>
 											<asp:Parameter Name="staff_id" />
@@ -172,22 +166,6 @@
 					
 					
 					<footer class="android-footer mdl-mega-footer">
-						<div class="mdl-mega-footer--top-section">
-							<div class="mdl-mega-footer--left-section">
-								<button class="mdl-mega-footer--social-btn"></button>
-								&nbsp;
-								<button class="mdl-mega-footer--social-btn"></button>
-								&nbsp;
-								<button class="mdl-mega-footer--social-btn"></button>
-							</div>
-							<div class="mdl-mega-footer--right-section">
-								<a class="mdl-typography--font-light" href="#top page">
-								Back to Top
-									<i class="material-icons">expand_less</i>
-								</a>
-							</div>
-						</div>
-
 						<div class="mdl-mega-footer--middle-section">
 							<p class="mdl-typography--font-light">Developer: Ninez Manas</p>
 							<p class="mdl-typography--font-light">Some features and devices may not be available in all areas</p>

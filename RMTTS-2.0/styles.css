@@ -584,7 +584,9 @@ fieldset[disabled] .btn-success.focus {
 
   .android-footer .mdl-mega-footer--bottom-section {
     position: relative;
-  }
+    top: -1032px;
+    left: -1px;
+}
 
   .android-footer .mdl-mega-footer--bottom-section a {
     margin-right: 2em;

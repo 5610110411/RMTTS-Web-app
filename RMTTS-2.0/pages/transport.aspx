@@ -5,232 +5,285 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head runat="server">
         <meta charset="utf-8">
-		    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-		    <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
-		    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-		    <title>RMTTS</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+		<title>RMTTS</title>
 
-		    <!-- Page styles -->
-		    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-		    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-		    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.min.css">
-		    <!-- link to outer folder -->
-		    <link rel="stylesheet" href="../styles.css">
-		    <style>
-		    #view-source {
-		      position: fixed;
-		      display: block;
-		      right: 0;
-		      bottom: 0;
-		      margin-right: 40px;
-		      margin-bottom: 40px;
-		      z-index: 900;
-		    }
-		    input[type=text] {
-                width: 50%;
-                padding: 12px 20px;
-                margin: 8px 0;
-                box-sizing: border-box;
-                border: 3px solid #ccc;
-                -webkit-transition: 0.5s;
-                transition: 0.5s;
-                outline: none;
+		<!-- Page styles -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.min.css">
+		<!-- link to outer folder -->
+		<link rel="stylesheet" href="../styles.css">
+		<style>
+			input[type=text] {
+				margin-top: 20px;
+				display: inline-block;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				box-sizing: border-box;
+                margin-left: 0px;
             }
-
-            input[type=text]:focus {
-                border: 3px solid #555;
-            }
-</style>
-			
-		    </style>
+			label{
+				float: left;
+				width: 150px;
+				text-align: right;
+				padding-right: 12px;
+				margin-top: 20px;
+				clear: left;
+			}
+			input[type=text]:focus {
+				border: 3px solid #555;
+			}
+		</style>
     </head>
     <body>
-        <form id="form1" runat="server">
-			<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-				<div class="android-header mdl-layout__header mdl-layout__header--waterfall">
-					<div class="mdl-layout__header-row">
-						<span class="android-title mdl-layout-title">
-							<!-- top logo image -->
-							<img class="android-logo-image" src="../images/logo-scg.png">
-						</span>
-						<!-- Add spacer, to align navigation to the right in desktop -->
-						<div class="android-header-spacer mdl-layout-spacer"></div>
-						
-						<!-- Navigation -->
-						<div class="android-navigation-container">
-							<nav class="android-navigation mdl-navigation">
-								<a class="mdl-navigation__link" href="../RMTTS.aspx">เริ่มต้น</a>
-								<a class="mdl-navigation__link" href="transport.aspx">ค้นหาข้อมูล</a>
-								<a class="mdl-navigation__link" href="usermanagement.aspx">จัดการข้อมูลบุคคล</a>
-								<a class="mdl-navigation__link" href="carmanagement.aspx">จัดการข้อมูลรถ</a>
-								<a class="mdl-navigation__link" href="">สอบถาม</a>
-							</nav>
+			<form id="form1" runat="server">
+				<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+					<div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+						<div class="mdl-layout__header-row">
+							<span class="android-title mdl-layout-title">
+								<!-- top logo image -->
+								<img class="android-logo-image" src="../images/logo-scg.png">
+							</span>
+							<!-- Add spacer, to align navigation to the right in desktop -->
+							<div class="android-header-spacer mdl-layout-spacer"></div>
+							
+							<!-- Navigation -->
+							<div class="android-navigation-container">
+								<nav class="android-navigation mdl-navigation">
+									<a class="mdl-navigation__link" href="../RMTTS.aspx">เริ่มต้น</a>
+									<a class="mdl-navigation__link" href="transport.aspx">ค้นหาข้อมูล</a>
+									<a class="mdl-navigation__link" href="usermanagement.aspx">จัดการข้อมูลบุคคล</a>
+									<a class="mdl-navigation__link" href="carmanagement.aspx">จัดการข้อมูลรถ</a>
+									<a class="mdl-navigation__link" href="">สอบถาม</a>
+								</nav>
+							</div>
+							<span class="android-mobile-title mdl-layout-title">
+								<img class="android-logo-image" src="../images/scg-logo-white.png">
+							</span>
 						</div>
-						<span class="android-mobile-title mdl-layout-title">
-							<img class="android-logo-image" src="../images/scg-logo-white.png">
-						</span>
-						
 					</div>
-				</div>
-				<!--content section -->
-				<div class="android-content mdl-layout__content">
-					<a name="top page"></a>
-					<div class="android-more-section">
-						<div class="android-section-title mdl-typography--display-1-color-contrast">ตรวจสอบการขนส่งวัตถุดิบ</div>       
-						<div class="android-card-container mdl-grid">
-							<!--start cell-->
-							<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-								<div class="mdl-card__title">
-									<h4 class="mdl-card__title-text">ข้อมูลการขนส่งวัตถุดิบทั้งหมด</h4>
-								</div>
-								
-								<div class="mdl-card__supporting-text">
-								<div class="android-frame">
-									เลขทะเบียนรถ<br />
-									<asp:TextBox ID="txt_tp_vehicle" runat="server"></asp:TextBox>									
-									<br />
-									<br />
-									วัตถุดิบ<br />
-									<asp:TextBox ID="txt_tp_material" runat="server"></asp:TextBox>									
-									<br />
-									<br />
-									เดินทางจาก<br />
-									<asp:TextBox ID="txt_tp_from" runat="server"></asp:TextBox>									
-									<br />
-									<br />
-									ไปยัง<br />
-									<asp:TextBox ID="txt_tp_to" runat="server"></asp:TextBox>
-									<br />
-									<br />
-									วัน/เดือน/ปี<br />
-									<asp:TextBox ID="txt_vehicle_type" runat="server"></asp:TextBox>
-									
-									<br />
-									<br />
-									
-									
-									<!--search button-->
-									<a class="btn btn-success">ค้นหา</a>
-									<br />
-									<br />
-								</div>
-
-									<asp:SqlDataSource ID="SqlDS_staff" runat="server" ConnectionString="<%$ ConnectionStrings:RMTTSConnectionString %>" SelectCommand="SELECT * FROM tb_staff" DeleteCommand="DELETE FROM [tb_staff] WHERE [staff_id] = @staff_id" InsertCommand="INSERT INTO [tb_staff] ([staff_id], [staff_title], [staff_firstname], [staff_lastname], [staff_tel], [staff_email], [staff_role]) VALUES (@staff_id, @staff_title, @staff_firstname, @staff_lastname, @staff_tel, @staff_email, @staff_role)" UpdateCommand="UPDATE [tb_staff] SET [staff_title] = @staff_title, [staff_firstname] = @staff_firstname, [staff_lastname] = @staff_lastname, [staff_tel] = @staff_tel, [staff_email] = @staff_email, [staff_role] = @staff_role WHERE [staff_id] = @staff_id">
-										<DeleteParameters>
-											<asp:Parameter Name="staff_id" />
-										</DeleteParameters>
-										<InsertParameters>
-											<asp:Parameter Name="staff_id" />
-											<asp:Parameter Name="staff_title" />
-											<asp:Parameter Name="staff_firstname" />
-											<asp:Parameter Name="staff_lastname" />
-											<asp:Parameter Name="staff_tel" />
-											<asp:Parameter Name="staff_email" />
-											<asp:Parameter Name="staff_role" />
-										</InsertParameters>
-										<UpdateParameters>
-											<asp:Parameter Name="staff_title" />
-											<asp:Parameter Name="staff_firstname" />
-											<asp:Parameter Name="staff_lastname" />
-											<asp:Parameter Name="staff_tel" />
-											<asp:Parameter Name="staff_email" />
-											<asp:Parameter Name="staff_role" />
-											<asp:Parameter Name="staff_id" />
-										</UpdateParameters>
-									</asp:SqlDataSource>
-									<div style=" overflow:scroll;">
-										<!--Cellpadding==ช่องว่างระหว่างบรรทัด -->
-										<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="5" DataKeyNames="staff_id" DataSourceID="SqlDS_staff" ForeColor="#333333" GridLines="None" Width="900px">
-												<AlternatingRowStyle BackColor="White" />
-												<Columns>
-													<asp:BoundField DataField="staff_id" HeaderText="รหัส" ReadOnly="False" SortExpression="staff_id"/>
-													<asp:BoundField DataField="staff_title" HeaderText="คำนำหน้า" SortExpression="staff_title"/>
-													<asp:BoundField DataField="staff_firstname" HeaderText="ชื่อ" SortExpression="staff_firstname"/>
-													<asp:BoundField DataField="staff_lastname" HeaderText="นามสกุล" SortExpression="staff_lastname"/>
-													<asp:BoundField DataField="staff_tel" HeaderText="เบอร์โทร" SortExpression="staff_tel"/>
-													<asp:BoundField DataField="staff_email" HeaderText="E-mail" SortExpression="staff_email" />
-													<asp:BoundField DataField="staff_role" HeaderText="Role" SortExpression="staff_role" />
-													<asp:TemplateField HeaderText="แก้ไข">
-												<EditItemTemplate>
-													<asp:Button class="btn btn-success" ID="ButtonUpdate" runat="server" CommandName="Update"  Text="Update" />
-													<asp:Button class="btn btn-danger" ID="ButtonCancel" runat="server" CommandName="Cancel"  Text="Cancel" />
-												</EditItemTemplate>
-												<ItemTemplate>
-													<asp:Button class="btn btn-success" ID="ButtonEdit" runat="server" CommandName="Edit"  Text="Edit" width="62" height="37"/>
-													<asp:Button class="btn btn-danger" ID="ButtonDelete" runat="server" CommandName="Delete"  Text="Delete" width="62" height="37"/>	
-												</ItemTemplate>
-											</asp:TemplateField>
-
-											  </Columns>
-											  <EditRowStyle BackColor="#2461BF" />
-											  <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-											  <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-											  <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-											  <RowStyle BackColor="#EFF3FB" />
-											  <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-											  <SortedAscendingCellStyle BackColor="#F5F7FB" />
-											  <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-											  <SortedDescendingCellStyle BackColor="#E9EBEF" />
-											  <SortedDescendingHeaderStyle BackColor="#4870BE" />
-										</asp:GridView>
+					<!--content section -->
+					<div class="android-content mdl-layout__content" style="overflow:scroll; padding: 5px; <!--top: 609px; left: 6px;-->">
+						<a name="top page"></a>
+						<div class="android-more-section">
+							<div class="android-section-title mdl-typography--display-1-color-contrast">ตรวจสอบการขนส่งวัตถุดิบ</div>       
+						
+								<!--start cell-->
+									<div class="mdl-card__title">
+										<h4 class="mdl-card__title-text">ข้อมูลการขนส่งวัตถุดิบทั้งหมด</h4>
 									</div>
-									<a class="android-link mdl-button mdl-js-button" href="">Print report</a>
+									<div class="android-frame">
+										<div>
+										    <label>เลขทะเบียนรถ</label>
+										    <asp:TextBox ID="txt_tp_vehicle" runat="server" Height="34px" Width="137px"></asp:TextBox>									
+										</div>
+										
+										<div>
+                                            <label>วัตถุดิบ</label>
+                                            <asp:DropDownList ID="ddl_material" runat="server" DataSourceID="SqlDataSource_material" DataTextField="material_name" DataValueField="material_name" Height="34px" Width="100px">
+                                            </asp:DropDownList>
+&nbsp;&nbsp;&nbsp;
+                                            เดินทางจาก
+										    <asp:DropDownList ID="ddl_station_from" runat="server" DataSourceID="SqlDataSource_station" DataTextField="station_name" DataValueField="station_name" Height="34px" Width="130px">
+                                            </asp:DropDownList>
+										    ไปยัง
+										    <asp:DropDownList ID="ddl_station_to" runat="server" DataSourceID="SqlDataSource_station" DataTextField="station_name" DataValueField="station_name" Height="34px" Width="130px">
+                                            </asp:DropDownList>
+&nbsp;สถานะ<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource_status" DataTextField="status_describe" DataValueField="status_describe" Height="34px" Width="147px">
+                                            </asp:DropDownList>
+&nbsp;&nbsp;&nbsp;
+										    <asp:TextBox ID="txt_tp_m" runat="server" OnTextChanged="txt_tp_material_TextChanged" Height="34px" Width="10px"></asp:TextBox>
+										</div>
+										
+										<label>ตั้งแต่</label> <asp:DropDownList ID="DropDownList_Date0" runat="server" Width="40px" Height="34px">
+                                            <asp:ListItem>1</asp:ListItem>
+                                            <asp:ListItem>2</asp:ListItem>
+                                            <asp:ListItem>3</asp:ListItem>
+                                            <asp:ListItem>4</asp:ListItem>
+                                            <asp:ListItem>5</asp:ListItem>
+                                            <asp:ListItem>6</asp:ListItem>
+                                            <asp:ListItem>7</asp:ListItem>
+                                            <asp:ListItem>8</asp:ListItem>
+                                            <asp:ListItem>9</asp:ListItem>
+                                            <asp:ListItem>10</asp:ListItem>
+                                            <asp:ListItem>11</asp:ListItem>
+                                            <asp:ListItem>12</asp:ListItem>
+                                            <asp:ListItem>13</asp:ListItem>
+                                            <asp:ListItem>14</asp:ListItem>
+                                            <asp:ListItem>15</asp:ListItem>
+                                            <asp:ListItem>16</asp:ListItem>
+                                            <asp:ListItem>17</asp:ListItem>
+                                            <asp:ListItem>18</asp:ListItem>
+                                            <asp:ListItem>19</asp:ListItem>
+                                            <asp:ListItem>20</asp:ListItem>
+                                            <asp:ListItem>21</asp:ListItem>
+                                            <asp:ListItem>22</asp:ListItem>
+                                            <asp:ListItem>23</asp:ListItem>
+                                            <asp:ListItem>24</asp:ListItem>
+                                            <asp:ListItem>25</asp:ListItem>
+                                            <asp:ListItem>26</asp:ListItem>
+                                            <asp:ListItem>27</asp:ListItem>
+                                            <asp:ListItem>28</asp:ListItem>
+                                            <asp:ListItem>29</asp:ListItem>
+                                            <asp:ListItem>30</asp:ListItem>
+                                            <asp:ListItem>31</asp:ListItem>
+                                        </asp:DropDownList>
+                                        <asp:DropDownList ID="DropDownList_Month0" runat="server" Height="34px" Width="80px">
+                                            <asp:ListItem Value="01">มกราคม</asp:ListItem>
+                                            <asp:ListItem Value="02">กุมภาพันธ์</asp:ListItem>
+                                            <asp:ListItem Value="03">มีนาคม</asp:ListItem>
+                                            <asp:ListItem Value="04">เมษายน</asp:ListItem>
+                                            <asp:ListItem Value="05">พฤษภาคม</asp:ListItem>
+                                            <asp:ListItem Value="06">มิถุนายน</asp:ListItem>
+                                            <asp:ListItem Value="07">กรกฎาคม</asp:ListItem>
+                                            <asp:ListItem Value="08">สิงหาคม</asp:ListItem>
+                                            <asp:ListItem Value="09">กันยายน</asp:ListItem>
+                                            <asp:ListItem Value="10">ตุลาคม</asp:ListItem>
+                                            <asp:ListItem Value="11">พฤศจิกายน</asp:ListItem>
+                                            <asp:ListItem Value="12">ธันวาคม</asp:ListItem>
+                                        </asp:DropDownList>
+                                        <asp:TextBox ID="txt_tp_year0" runat="server" Height="34px" Width="69px"></asp:TextBox>
+										
+										ถึง<asp:DropDownList ID="DropDownList_Date" runat="server" Width="40px" Height="34px">
+                                            <asp:ListItem>1</asp:ListItem>
+                                            <asp:ListItem>2</asp:ListItem>
+                                            <asp:ListItem>3</asp:ListItem>
+                                            <asp:ListItem>4</asp:ListItem>
+                                            <asp:ListItem>5</asp:ListItem>
+                                            <asp:ListItem>6</asp:ListItem>
+                                            <asp:ListItem>7</asp:ListItem>
+                                            <asp:ListItem>8</asp:ListItem>
+                                            <asp:ListItem>9</asp:ListItem>
+                                            <asp:ListItem>10</asp:ListItem>
+                                            <asp:ListItem>11</asp:ListItem>
+                                            <asp:ListItem>12</asp:ListItem>
+                                            <asp:ListItem>13</asp:ListItem>
+                                            <asp:ListItem>14</asp:ListItem>
+                                            <asp:ListItem>15</asp:ListItem>
+                                            <asp:ListItem>16</asp:ListItem>
+                                            <asp:ListItem>17</asp:ListItem>
+                                            <asp:ListItem>18</asp:ListItem>
+                                            <asp:ListItem>19</asp:ListItem>
+                                            <asp:ListItem>20</asp:ListItem>
+                                            <asp:ListItem>21</asp:ListItem>
+                                            <asp:ListItem>22</asp:ListItem>
+                                            <asp:ListItem>23</asp:ListItem>
+                                            <asp:ListItem>24</asp:ListItem>
+                                            <asp:ListItem>25</asp:ListItem>
+                                            <asp:ListItem>26</asp:ListItem>
+                                            <asp:ListItem>27</asp:ListItem>
+                                            <asp:ListItem>28</asp:ListItem>
+                                            <asp:ListItem>29</asp:ListItem>
+                                            <asp:ListItem>30</asp:ListItem>
+                                            <asp:ListItem>31</asp:ListItem>
+                                        </asp:DropDownList>
+                                        <asp:DropDownList ID="DropDownList_Month" runat="server" Height="34px" Width="80px">
+                                            <asp:ListItem Value="01">มกราคม</asp:ListItem>
+                                            <asp:ListItem Value="02">กุมภาพันธ์</asp:ListItem>
+                                            <asp:ListItem Value="03">มีนาคม</asp:ListItem>
+                                            <asp:ListItem Value="04">เมษายน</asp:ListItem>
+                                            <asp:ListItem Value="05">พฤษภาคม</asp:ListItem>
+                                            <asp:ListItem Value="06">มิถุนายน</asp:ListItem>
+                                            <asp:ListItem Value="07">กรกฎาคม</asp:ListItem>
+                                            <asp:ListItem Value="08">สิงหาคม</asp:ListItem>
+                                            <asp:ListItem Value="09">กันยายน</asp:ListItem>
+                                            <asp:ListItem Value="10">ตุลาคม</asp:ListItem>
+                                            <asp:ListItem Value="11">พฤศจิกายน</asp:ListItem>
+                                            <asp:ListItem Value="12">ธันวาคม</asp:ListItem>
+                                        </asp:DropDownList>
+                                        <asp:TextBox ID="txt_tp_year" runat="server" Height="34px" Width="69px"></asp:TextBox>
+                                        <br />
+                
+                                        <asp:Button ID="bt_search" class="btn btn-success" runat="server" Text="Search" Height="40px" />
+										<asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+										<br />
+										<asp:SqlDataSource ID="SqlDataSource_station" runat="server" ConnectionString="<%$ ConnectionStrings:RMTTSConnectionString %>" SelectCommand="SELECT [station_name] FROM [tb_stations]"></asp:SqlDataSource>
+                                        <asp:SqlDataSource ID="SqlDataSource_material" runat="server" ConnectionString="<%$ ConnectionStrings:RMTTSConnectionString %>" SelectCommand="SELECT [material_name] FROM [tb_materials]"></asp:SqlDataSource>
+                                        <asp:SqlDataSource ID="SqlDataSource_status" runat="server" ConnectionString="<%$ ConnectionStrings:RMTTSConnectionString %>" SelectCommand="SELECT [status_describe] FROM [tb_status]"></asp:SqlDataSource>
+										<asp:GridView ID="GridView2" runat="server">
+                                        </asp:GridView>
+										<br />
+									</div>
+									<asp:SqlDataSource ID="SqlDS_staff" runat="server" ConnectionString="<%$ ConnectionStrings:RMTTSConnectionString %>" SelectCommand="
+														SELECT tb_transports.tp_time_get, tb_transports.tp_time_get_finish, tb_transports.tp_time_set, tb_transports.tp_time_set_finish, 
+															tb_materials.material_name, tb_status.status_describe, tb_transports.tp_vehicle, tb_vehicles.vehicle_number 
+														FROM tb_transports 
+															INNER JOIN tb_materials ON tb_transports.tp_material = tb_materials.material_id 
+															INNER JOIN tb_stations ON tb_transports.tp_from = tb_stations.station_id AND tb_transports.tp_to = tb_stations.station_id 
+															INNER JOIN tb_status ON tb_transports.tp_status = tb_status.status_id 
+															INNER JOIN tb_vehicles ON tb_transports.tp_vehicle = tb_vehicles.vehicle_id
+														WHERE ([tp_vehicle] LIKE '%' + @tp_vehicle + '%')">
+										<SelectParameters>
+                                            <asp:ControlParameter ControlID="txt_tp_vehicle" Name="tp_vehicle" PropertyName="Text" Type="String" />
+                                            <asp:ControlParameter ControlID="txt_carNum" Name="tp_carNum" PropertyName="Text" Type="String" />
+                                        </SelectParameters>
+									</asp:SqlDataSource>
+										<!--Cellpadding==ช่องว่างระหว่างบรรทัด -->
+										<asp:GridView ID="GridView1" runat="server" CellPadding="4" DataSourceID="SqlDS_staff" ForeColor="#333333" GridLines="None">
+                                            <AlternatingRowStyle BackColor="White" />
+                                            <Columns>
+                                                <asp:BoundField DataField="tp_vehicle" HeaderText="เลขทะเบียนรถ" />
+                                                <asp:BoundField DataField="vehicle_number" HeaderText="เลขข้างรถ" />
+                                                <asp:BoundField DataField="tp_time_get" HeaderText="รับวัตถุดิบจากแหล่ง" />
+                                                <asp:BoundField DataField="tp_time_get_finish" HeaderText="รับวัตถุดิบเสร็จสิ้น" />
+                                                <asp:BoundField DataField="tp_time_set" HeaderText="รับวัตถุดิบเข้า" />
+                                                <asp:BoundField DataField="tp_time_set_finish" HeaderText="รับวัตถุดิบเสร็จสิ้น" />
+                                                <asp:BoundField DataField="material_name" HeaderText="วัตถุดิบ" />
+                                            </Columns>
+                                            <EditRowStyle BackColor="#2461BF" />
+                                            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                            <RowStyle BackColor="#EFF3FB" />
+                                            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                            <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                            <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                            <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                            </asp:GridView>
 									
-								</div>
-							</div>
+									<a class="android-link mdl-button mdl-js-button" href="">Print report					
+									
+								
+							
 						</div>
-					</div>
-					<footer class="android-footer mdl-mega-footer">
-						<div class="mdl-mega-footer--top-section">
-							<div class="mdl-mega-footer--left-section">
-								<button class="mdl-mega-footer--social-btn"></button>
-								&nbsp;
-								<button class="mdl-mega-footer--social-btn"></button>
-								&nbsp;
-								<button class="mdl-mega-footer--social-btn"></button>
+						<footer class="android-footer mdl-mega-footer">
+							<div class="mdl-mega-footer--middle-section">
+								<p class="mdl-typography--font-light">Developer: Ninez Manas</p>
+								<p class="mdl-typography--font-light">Some features and devices may not be available in all areas</p>
 							</div>
-							<div class="mdl-mega-footer--right-section">
-								<a class="mdl-typography--font-light" href="#top page">
-								Back to Top
-								<i class="material-icons">expand_less</i>
+
+							<div class="mdl-mega-footer--bottom-section">
+								<a class="android-link android-link-menu mdl-typography--font-light" id="version-dropdown">
+									Versions
+									<i class="material-icons">arrow_drop_up</i>
 								</a>
+								<ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="version-dropdown">
+									<li class="mdl-menu__item">5.0 Lollipop</li>
+									<li class="mdl-menu__item">4.4 KitKat</li>
+									<li class="mdl-menu__item">4.3 Jelly Bean</li>
+									<li class="mdl-menu__item">Android History</li>
+								</ul>
+								<a class="android-link android-link-menu mdl-typography--font-light" id="developers-dropdown">
+									For Developers
+									<i class="material-icons">arrow_drop_up</i>
+								</a>
+								<ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="developers-dropdown">
+									<li class="mdl-menu__item">App developer resources</li>
+									<li class="mdl-menu__item">Android Open Source Project</li>
+									<li class="mdl-menu__item">Android SDK</li>
+									<li class="mdl-menu__item">Android for Work</li>
+								</ul>
+									<a class="android-link mdl-typography--font-light" href="">Blog</a>
+									<a class="android-link mdl-typography--font-light" href="">Privacy Policy</a>
 							</div>
-						</div>
-
-						<div class="mdl-mega-footer--middle-section">
-							<p class="mdl-typography--font-light">Developer: Ninez Manas</p>
-							<p class="mdl-typography--font-light">Some features and devices may not be available in all areas</p>
-						</div>
-
-						<div class="mdl-mega-footer--bottom-section">
-							<a class="android-link android-link-menu mdl-typography--font-light" id="version-dropdown">
-								Versions
-								<i class="material-icons">arrow_drop_up</i>
-							</a>
-							<ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="version-dropdown">
-								<li class="mdl-menu__item">5.0 Lollipop</li>
-								<li class="mdl-menu__item">4.4 KitKat</li>
-								<li class="mdl-menu__item">4.3 Jelly Bean</li>
-								<li class="mdl-menu__item">Android History</li>
-							</ul>
-							<a class="android-link android-link-menu mdl-typography--font-light" id="developers-dropdown">
-								For Developers
-								<i class="material-icons">arrow_drop_up</i>
-							</a>
-							<ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="developers-dropdown">
-								<li class="mdl-menu__item">App developer resources</li>
-								<li class="mdl-menu__item">Android Open Source Project</li>
-								<li class="mdl-menu__item">Android SDK</li>
-								<li class="mdl-menu__item">Android for Work</li>
-							</ul>
-								<a class="android-link mdl-typography--font-light" href="">Blog</a>
-								<a class="android-link mdl-typography--font-light" href="">Privacy Policy</a>
-						</div>
-					</footer>
+						</footer>
+					</div>
 				</div>
-			</div>
-			<script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
-		</form>
+				<script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+			</form>
     </body>
 </html>
-

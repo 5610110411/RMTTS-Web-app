@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="addUser.aspx.cs" Inherits="RMTTS_2._0.pages.addUser" %>
 
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
 	<head>
@@ -9,7 +9,6 @@
 		<meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 		<title>RMTTS</title>
-
 		<!-- Page styles -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -39,7 +38,7 @@
 	<body>
 		<div id="wrapper">
 			<form id="form1" runat="server">
-				<div  class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+				<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 					<div class="android-header mdl-layout__header mdl-layout__header--waterfall">
 						<div class="mdl-layout__header-row">
 							<span class="android-title mdl-layout-title">
@@ -130,13 +129,11 @@
 								</ul>
 								<a class="android-link android-link-menu mdl-typography--font-light" id="developers-dropdown">
 									For Developers
-
-				
-
 								<i class="material-icons">arrow_drop_up</i>
 								</a>
 								<ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="developers-dropdown">
-									<li class="mdl-menu__item">App developer resourcestem">Android Open Source Project</li>
+									<li class="mdl-menu__item">App developer resources</li>
+									<li class="mdl-menu__item">Android Open Source Project</li>
 									<li class="mdl-menu__item">Android SDK</li>
 									<li class="mdl-menu__item">Android for Work</li>
 								</ul>

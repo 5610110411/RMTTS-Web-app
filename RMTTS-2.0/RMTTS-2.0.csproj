@@ -101,6 +101,7 @@
     <Content Include="pages\addcar.aspx" />
     <Content Include="pages\addUser.aspx" />
     <Content Include="pages\carmanagement.aspx" />
+    <Content Include="pages\searchOnly.aspx" />
     <Content Include="pages\transport.aspx" />
     <Content Include="pages\usermanagement.aspx" />
     <Content Include="RMTTS.aspx" />
@@ -130,6 +131,13 @@
     </Compile>
     <Compile Include="pages\carmanagement.aspx.designer.cs">
       <DependentUpon>carmanagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\searchOnly.aspx.cs">
+      <DependentUpon>searchOnly.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\searchOnly.aspx.designer.cs">
+      <DependentUpon>searchOnly.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\transport.aspx.cs">
       <DependentUpon>transport.aspx</DependentUpon>
