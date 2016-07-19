@@ -197,16 +197,38 @@
                                         <asp:TextBox ID="txt_tp_year" runat="server" Height="34px" Width="69px"></asp:TextBox>
                                         <br />
                 
-                                        <asp:Button ID="bt_search" class="btn btn-success" runat="server" Text="Search" Height="40px" />
-										<asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+                                        <asp:Button ID="bt_search" class="btn btn-success" runat="server" Text="Search" Height="40px" OnClick="bt_search_Click" />
 										<br />
 										<asp:SqlDataSource ID="SqlDataSource_station" runat="server" ConnectionString="<%$ ConnectionStrings:RMTTSConnectionString %>" SelectCommand="SELECT [station_name] FROM [tb_stations]"></asp:SqlDataSource>
                                         <asp:SqlDataSource ID="SqlDataSource_material" runat="server" ConnectionString="<%$ ConnectionStrings:RMTTSConnectionString %>" SelectCommand="SELECT [material_name] FROM [tb_materials]"></asp:SqlDataSource>
                                         <asp:SqlDataSource ID="SqlDataSource_status" runat="server" ConnectionString="<%$ ConnectionStrings:RMTTSConnectionString %>" SelectCommand="SELECT [status_describe] FROM [tb_status]"></asp:SqlDataSource>
-										<asp:GridView ID="GridView2" runat="server">
+										<asp:GridView ID="GridView_search" runat="server" AutoGenerateColumns="False" CellPadding="15" ForeColor="#333333" GridLines="None" >
+										
+											<Columns>
+                                                <asp:BoundField DataField="tp_vehicle" HeaderText="เลขทะเบียนรถ" />
+                                                <asp:BoundField DataField="vehicle_number" HeaderText="เลขข้างรถ" />
+												<asp:BoundField DataField="material_name" HeaderText="วัตถุดิบ" />
+                                                <asp:BoundField DataField="tp_time_get" HeaderText="รับวัตถุดิบจากแหล่ง" />
+                                                <asp:BoundField DataField="tp_time_get_finish" HeaderText="รับวัตถุดิบเสร็จสิ้น" />
+                                                <asp:BoundField DataField="tp_time_set" HeaderText="รับวัตถุดิบเข้า" />
+                                                <asp:BoundField DataField="tp_time_set_finish" HeaderText="รับวัตถุดิบเสร็จสิ้น" />
+                                                
+                                            </Columns>
+                                            <EditRowStyle BackColor="#2461BF" />
+                                            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                            <RowStyle BackColor="#EFF3FB" />
+                                            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                            <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                            <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                            <SortedDescendingHeaderStyle BackColor="#4870BE" />
+										
                                         </asp:GridView>
 										<br />
 									</div>
+                                <!--
 									<asp:SqlDataSource ID="SqlDS_staff" runat="server" ConnectionString="<%$ ConnectionStrings:RMTTSConnectionString %>" SelectCommand="
 														SELECT tb_transports.tp_time_get, tb_transports.tp_time_get_finish, tb_transports.tp_time_set, tb_transports.tp_time_set_finish, 
 															tb_materials.material_name, tb_status.status_describe, tb_transports.tp_vehicle, tb_vehicles.vehicle_number 
@@ -222,6 +244,7 @@
                                         </SelectParameters>
 									</asp:SqlDataSource>
 										<!--Cellpadding==ช่องว่างระหว่างบรรทัด -->
+                                <!--
 										<asp:GridView ID="GridView1" runat="server" CellPadding="4" DataSourceID="SqlDS_staff" ForeColor="#333333" GridLines="None">
                                             <AlternatingRowStyle BackColor="White" />
                                             <Columns>
@@ -244,8 +267,8 @@
                                             <SortedDescendingCellStyle BackColor="#E9EBEF" />
                                             <SortedDescendingHeaderStyle BackColor="#4870BE" />
                             </asp:GridView>
-									
-									<a class="android-link mdl-button mdl-js-button" href="">Print report					
+                            -->
+													
 									
 								
 							
