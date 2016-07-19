@@ -99,9 +99,16 @@
 									</div>	
 									<div>
 										<label>สิทธิ์การเข้าถึง:</label>
-										<asp:DropDownList style="margin-top: 20px;" class="form-control" ID="DropDownList_role" runat="server" DataSourceID="SqlDataSource_role" DataTextField="auth_name" DataValueField="auth_name" Height="34px" Width="147px">
+										<asp:DropDownList style="margin-top: 20px;" class="form-control" ID="DropDownList_role" runat="server" DataSourceID="SqlDataSource_role" DataTextField="auth_name" DataValueField="auth_name" Height="34px" Width="147px" AppendDataBoundItems="true">
+										<asp:ListItem Value="none">--- เลือก ---</asp:ListItem>
+										
+										    
+										
 										</asp:DropDownList>
-										<asp:SqlDataSource ID="SqlDataSource_role" runat="server" ConnectionString="<%$ ConnectionStrings:RMTTSConnectionString %>" SelectCommand="SELECT [auth_name] FROM [tb_authoritys]"></asp:SqlDataSource>
+										<asp:SqlDataSource ID="SqlDataSource_role" runat="server" ConnectionString="<%$ ConnectionStrings:RMTTSConnectionString %>" SelectCommand="SELECT [auth_name] FROM [tb_authoritys]"> 
+		
+
+										</asp:SqlDataSource>
 									</div>
 								</div>
 								<div style="margin-left: 600px; margin-bottom: 50px;">

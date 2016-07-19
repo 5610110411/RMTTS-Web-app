@@ -31,33 +31,45 @@ namespace RMTTS_2._0.pages
             */
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO tb_staff(staff_id,staff_title,staff_firstname,staff_lastname, staff_tel, staff_email, staff_role) VALUES('" + txt_staffid.Text + "', '" + DropDownList_title.SelectedItem.Text + "', '" + txt_firstname.Text + "', '" + txt_lastname.Text + "', '" + txt_tel.Text + "', '" + txt_email.Text + "', '" + DropDownList_role.SelectedItem.Text + "')", con);
-            int result = cmd.ExecuteNonQuery();
-            con.Close();
+			
+			if(DropDownList_role.SelectedValue != "none"){
+			
+				SqlCommand cmd = new SqlCommand("INSERT INTO tb_staff(staff_id,staff_title,staff_firstname,staff_lastname, staff_tel, staff_email, staff_role) VALUES('" + txt_staffid.Text + "', '" + DropDownList_title.SelectedItem.Text + "', '" + txt_firstname.Text + "', '" + txt_lastname.Text + "', '" + txt_tel.Text + "', '" + txt_email.Text + "', '" + DropDownList_role.SelectedItem.Text + "')", con);
+				int result = cmd.ExecuteNonQuery();
+				con.Close();
 
-            if (result == 1)
-            {
-                //lblmsg.BackColor = Color.Green;
-                //lblmsg.ForeColor = Color.White;
-                //lblmsg.Text = "เพิ่มข้อมูลสำเร็จ";
-                //------------------Making popup window without reload page
-                //Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('การเพิ่มข้อมูลสำเร็จ');</script>");
-                //------------------Gray popup window
-                //System.Web.UI.ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "AlertBox", "alert('Message');", true);
-                //------------------Makeing popup window as long as reload page
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "redirect",
-                    "alert('เพิ่มข้อมูลสำเร็จ'); window.location='" + Request.ApplicationPath + "pages/usermanagement.aspx';", true);
-            }
-            else
-            {
-                //lblmsg.BackColor = Color.Red;
-                //lblmsg.ForeColor = Color.White;
-                //lblmsg.Text = "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "redirect",
-                    "alert('เพิ่มข้อมูลผิดพลาด ลองใหม่อีกครั้ง'); window.location='" + Request.ApplicationPath + "pages/usermanagement.aspx';", true);
-            }
-            //Response.Redirect("RMTTS.aspx");
-        }
+				if (result == 1)
+				{
+					//lblmsg.BackColor = Color.Green;
+					//lblmsg.ForeColor = Color.White;
+					//lblmsg.Text = "เพิ่มข้อมูลสำเร็จ";
+					//------------------Making popup window without reload page
+					//Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('การเพิ่มข้อมูลสำเร็จ');</script>");
+					//------------------Gray popup window
+					//System.Web.UI.ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "AlertBox", "alert('Message');", true);
+					//------------------Makeing popup window as long as reload page
+					ScriptManager.RegisterStartupScript(this, this.GetType(), "redirect",
+						"alert('เพิ่มข้อมูลสำเร็จ'); window.location='" + Request.ApplicationPath + "pages/usermanagement.aspx';", true);
+				}
+				else
+				{
+					//lblmsg.BackColor = Color.Red;
+					//lblmsg.ForeColor = Color.White;
+					//lblmsg.Text = "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง";
+					ScriptManager.RegisterStartupScript(this, this.GetType(), "redirect",
+						"alert('เพิ่มข้อมูลผิดพลาด ลองใหม่อีกครั้ง'); window.location='" + Request.ApplicationPath + "pages/usermanagement.aspx';", true);
+				}
+				//Response.Redirect("RMTTS.aspx");
+			
+			}else{
+				//ScriptManager.RegisterStartupScript(this, this.GetType(), "redirect",
+				//		"alert('กรุณากรอกข้อมูลให้ครบถ้วน'); window.location='" + Request.ApplicationPath + "/addUser.aspx';", true);
+				//Response.Redirect("addUser.aspx");
+				ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('กรุณากรอกข้อมูลให้ครบถ้วน')", true);
+				
+			}
+		
+		}
 		protected void bt_adduser_cancel(object sender, EventArgs e)
 		{
 			Response.Redirect("usermanagement.aspx");

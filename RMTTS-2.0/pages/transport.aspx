@@ -218,7 +218,7 @@
 														WHERE ([tp_vehicle] LIKE '%' + @tp_vehicle + '%')">
 										<SelectParameters>
                                             <asp:ControlParameter ControlID="txt_tp_vehicle" Name="tp_vehicle" PropertyName="Text" Type="String" />
-                                            <asp:ControlParameter ControlID="txt_carNum" Name="tp_carNum" PropertyName="Text" Type="String" />
+
                                         </SelectParameters>
 									</asp:SqlDataSource>
 										<!--Cellpadding==ช่องว่างระหว่างบรรทัด -->
