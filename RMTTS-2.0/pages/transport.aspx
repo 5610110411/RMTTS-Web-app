@@ -199,14 +199,33 @@
                 
                                         <asp:Button ID="bt_search" class="btn btn-success" runat="server" Text="Search" Height="40px" OnClick="bt_search_Click" />
 										<br />
+                                        <asp:SqlDataSource ID="SqlDataSource_show" runat="server" ConnectionString="<%$ ConnectionStrings:RMTTSConnectionString %>" OnSelecting="SqlDataSource_show_Selecting" SelectCommand="SELECT tb_transports.tp_vehicle, tb_vehicles.vehicle_number, tb_materials.material_name, tb_transports.tp_time_get, tb_transports.tp_time_get_finish, tb_transports.tp_time_set, tb_transports.tp_time_set_finish, tb_status.status_describe FROM tb_materials INNER JOIN tb_transports ON tb_materials.material_id = tb_transports.tp_material INNER JOIN tb_status ON tb_transports.tp_status = tb_status.status_id INNER JOIN tb_vehicles ON tb_transports.tp_vehicle = tb_vehicles.vehicle_id"></asp:SqlDataSource>
+										<br />
 										<asp:SqlDataSource ID="SqlDataSource_station" runat="server" ConnectionString="<%$ ConnectionStrings:RMTTSConnectionString %>" SelectCommand="SELECT [station_name] FROM [tb_stations]"></asp:SqlDataSource>
                                         <asp:SqlDataSource ID="SqlDataSource_material" runat="server" ConnectionString="<%$ ConnectionStrings:RMTTSConnectionString %>" SelectCommand="SELECT [material_name] FROM [tb_materials]"></asp:SqlDataSource>
                                         <asp:SqlDataSource ID="SqlDataSource_status" runat="server" ConnectionString="<%$ ConnectionStrings:RMTTSConnectionString %>" SelectCommand="SELECT [status_describe] FROM [tb_status]"></asp:SqlDataSource>
-										<asp:GridView ID="GridView_search" runat="server" CellPadding="15" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" >
+										<asp:GridView runat="server" CellPadding="15" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" DataSourceID="SqlDataSource_show" >
 										
 											<Columns>
+                                                
+												
+                                                
+                                                
+                                                
+                                                <asp:BoundField DataField="tp_vehicle" HeaderText="ทะเบียนรถ" SortExpression="tp_vehicle" />
+                                                <asp:BoundField DataField="vehicle_number" HeaderText="เลขข้างรถ" SortExpression="vehicle_number" />
+                                                <asp:BoundField DataField="material_name" HeaderText="วัตถุดิบ" SortExpression="material_name" />
+                                                <asp:BoundField DataField="tp_time_set" HeaderText="ส่งวัตถุดิบเข้า" SortExpression="tp_time_set" />
+                                                
 												<asp:BoundField DataField="tp_time_get" HeaderText="รับวัตถุดิบจากแหล่ง" />
                                                 <asp:BoundField DataField="tp_time_get_finish" HeaderText="รับวัตถุดิบเสร็จสิ้น" />
+                                                
+												
+                                                
+                                                
+                                                
+                                                <asp:BoundField DataField="tp_time_set_finish" HeaderText="เทวัตถุดิบเสร็จสิ้น" SortExpression="tp_time_set_finish" />
+                                                <asp:BoundField DataField="status_describe" HeaderText="สถานะล่าสุด" SortExpression="status_describe" />
                                                 
 												
                                                 

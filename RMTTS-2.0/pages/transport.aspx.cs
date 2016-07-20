@@ -31,7 +31,7 @@ namespace RMTTS_2._0.pages
 
         }
 
-        private void rep_bind()
+        /*private void rep_bind()
         {
             connection();
             //normal
@@ -47,10 +47,10 @@ namespace RMTTS_2._0.pages
 			DataSet ds = new DataSet();
 			da.Fill(ds);
             GridView_search.DataSource = ds;
-            GridView_search.DataBind();
+            SqlDataSource_show.DataBind();
 
 
-        }
+        }*/
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -59,7 +59,14 @@ namespace RMTTS_2._0.pages
 
         protected void bt_search_Click(object sender, EventArgs e)
         {
-            connection();
+            string whereclause = "";
+            if (txt_tp_vehicle.Text != "")
+                whereclause = whereclause + " AND tp_vehicle LIKE '%" + txt_tp_vehicle.Text + "%'";
+            
+            SqlDataSource_show.SelectCommand = SqlDataSource_show.SelectCommand + whereclause;
+            SqlDataSource_show.Select(DataSourceSelectArguments.Empty);
+
+            /*connection();
             //normal
             //string query = "select tb_transports.tp_time_get_finish from tb_transports where tp_vehicle ='" + txt_tp_vehicle.Text + "' AND tp_material ='2'";
 
@@ -94,6 +101,12 @@ namespace RMTTS_2._0.pages
 			{
                 GridView_search.Visible = false;        
 			}
+            */
+        }
+
+        protected void SqlDataSource_show_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        {
+
         }
     }
 }
