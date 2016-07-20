@@ -139,15 +139,6 @@ namespace RMTTS_2._0.pages {
         protected global::System.Web.UI.WebControls.Button bt_search;
         
         /// <summary>
-        /// Button1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
-        
-        /// <summary>
         /// SqlDataSource_station control.
         /// </summary>
         /// <remarks>
@@ -175,7 +166,7 @@ namespace RMTTS_2._0.pages {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource_status;
         
         /// <summary>
-        /// GridView2 control.
+        /// GridView_search control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
@@ -183,22 +174,6 @@ namespace RMTTS_2._0.pages {
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView_search;
         
-        /// <summary>
-        /// SqlDS_staff control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDS_staff;
         
-        /// <summary>
-        /// GridView1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }
