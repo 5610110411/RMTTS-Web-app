@@ -39,7 +39,7 @@
 		</style>
     </head>
     <body>
-			<form id="form1" runat="server">
+			<form id="form1" runat="server" defaultbutton="bt_search">
 				<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 					<div class="android-header mdl-layout__header mdl-layout__header--waterfall">
 						<div class="mdl-layout__header-row">
