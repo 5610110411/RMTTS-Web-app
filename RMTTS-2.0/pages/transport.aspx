@@ -83,7 +83,8 @@
 										
 										<div>
                                             <label>วัตถุดิบ</label>
-                                            <asp:DropDownList ID="ddl_material" runat="server" DataSourceID="SqlDataSource_material" DataTextField="material_name" DataValueField="material_name" Height="34px" Width="100px">
+                                            <asp:DropDownList ID="ddl_material" runat="server" DataSourceID="SqlDataSource_material" DataTextField="material_name" DataValueField="material_name" Height="34px" Width="100px" AppendDataBoundItems="True">
+                                                <asp:ListItem Value="none">--- เลือก ---</asp:ListItem>
                                             </asp:DropDownList>
 &nbsp;&nbsp;&nbsp;
                                             เดินทางจาก
@@ -98,7 +99,8 @@
 										    <asp:TextBox ID="txt_tp_m" runat="server" OnTextChanged="txt_tp_material_TextChanged" Height="34px" Width="10px"></asp:TextBox>
 										</div>
 										
-										<label>ตั้งแต่</label> <asp:DropDownList ID="DropDownList_Date0" runat="server" Width="40px" Height="34px">
+										<label>ตั้งแต่</label> <asp:DropDownList ID="DropDownList_Date0" runat="server" Width="50px" Height="34px" AppendDataBoundItems="True">
+                                            <asp:ListItem Value="none">--</asp:ListItem>
                                             <asp:ListItem>1</asp:ListItem>
                                             <asp:ListItem>2</asp:ListItem>
                                             <asp:ListItem>3</asp:ListItem>
@@ -131,7 +133,8 @@
                                             <asp:ListItem>30</asp:ListItem>
                                             <asp:ListItem>31</asp:ListItem>
                                         </asp:DropDownList>
-                                        <asp:DropDownList ID="DropDownList_Month0" runat="server" Height="34px" Width="80px">
+                                        <asp:DropDownList ID="DropDownList_Month0" runat="server" Height="34px" Width="80px" AppendDataBoundItems="True">
+                                            <asp:ListItem Value="none">--</asp:ListItem>
                                             <asp:ListItem Value="01">มกราคม</asp:ListItem>
                                             <asp:ListItem Value="02">กุมภาพันธ์</asp:ListItem>
                                             <asp:ListItem Value="03">มีนาคม</asp:ListItem>
@@ -145,9 +148,13 @@
                                             <asp:ListItem Value="11">พฤศจิกายน</asp:ListItem>
                                             <asp:ListItem Value="12">ธันวาคม</asp:ListItem>
                                         </asp:DropDownList>
+                                        <asp:DropDownList ID="ddl_year_from" runat="server">
+                                        </asp:DropDownList>
+&nbsp;&nbsp;&nbsp;
                                         <asp:TextBox ID="txt_tp_year0" runat="server" Height="34px" Width="69px"></asp:TextBox>
 										
-										ถึง<asp:DropDownList ID="DropDownList_Date" runat="server" Width="40px" Height="34px">
+										ถึง<asp:DropDownList ID="DropDownList_Date" runat="server" Width="50px" Height="34px" AppendDataBoundItems="True">
+                                            <asp:ListItem Value="none">--</asp:ListItem>
                                             <asp:ListItem>1</asp:ListItem>
                                             <asp:ListItem>2</asp:ListItem>
                                             <asp:ListItem>3</asp:ListItem>
@@ -180,7 +187,8 @@
                                             <asp:ListItem>30</asp:ListItem>
                                             <asp:ListItem>31</asp:ListItem>
                                         </asp:DropDownList>
-                                        <asp:DropDownList ID="DropDownList_Month" runat="server" Height="34px" Width="80px">
+                                        <asp:DropDownList ID="DropDownList_Month" runat="server" Height="34px" Width="80px" AppendDataBoundItems="True">
+                                            <asp:ListItem Value="none">--</asp:ListItem>
                                             <asp:ListItem Value="01">มกราคม</asp:ListItem>
                                             <asp:ListItem Value="02">กุมภาพันธ์</asp:ListItem>
                                             <asp:ListItem Value="03">มีนาคม</asp:ListItem>

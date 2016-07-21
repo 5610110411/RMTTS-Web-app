@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
+using System.Globalization;
 
 namespace RMTTS_2._0.pages
 {
@@ -23,10 +24,22 @@ namespace RMTTS_2._0.pages
 		}
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            bind_year_ddl();
         }
 
-        protected void txt_tp_material_TextChanged(object sender, EventArgs e)
+        
+        private void bind_year_ddl()
+        {
+            int year = (System.DateTime.Now.Year);
+            for (int intCount = year; intCount >= 1980; intCount--)
+            {
+                ddl_year_from.Items.Add(intCount.ToString());
+            }
+        }
+
+
+
+    protected void txt_tp_material_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -60,9 +73,12 @@ namespace RMTTS_2._0.pages
         protected void bt_search_Click(object sender, EventArgs e)
         {
             string whereclause = "";
-            if (txt_tp_vehicle.Text != "")
-                whereclause = whereclause + " AND tp_vehicle LIKE '%" + txt_tp_vehicle.Text + "%'";
-            
+            if (txt_tp_vehicle.Text.Trim() != "")
+                whereclause = whereclause + " AND tp_vehicle LIKE '%" + txt_tp_vehicle.Text.Trim() + "%'";
+            if (ddl_material.SelectedValue != "none")
+                //txt_tp_vehicle.Text = ddl_material.SelectedValue;
+                whereclause = whereclause + " AND tb_materials.material_name LIKE '" + ddl_material.SelectedValue + "'";
+
             SqlDataSource_show.SelectCommand = SqlDataSource_show.SelectCommand + whereclause;
             SqlDataSource_show.Select(DataSourceSelectArguments.Empty);
 
