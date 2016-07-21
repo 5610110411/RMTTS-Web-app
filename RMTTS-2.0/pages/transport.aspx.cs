@@ -28,12 +28,14 @@ namespace RMTTS_2._0.pages
         }
 
         
+        //Making DropdownList Year 
         private void bind_year_ddl()
         {
-            int year = (System.DateTime.Now.Year);
+            int year = (System.DateTime.Now.Year) + 543; // 543 is for convert to พ.ศ. 
             for (int intCount = year; intCount >= 1980; intCount--)
             {
                 ddl_year_from.Items.Add(intCount.ToString());
+                ddl_year_to.Items.Add(intCount.ToString());
             }
         }
 
@@ -78,6 +80,10 @@ namespace RMTTS_2._0.pages
             if (ddl_material.SelectedValue != "none")
                 //txt_tp_vehicle.Text = ddl_material.SelectedValue;
                 whereclause = whereclause + " AND tb_materials.material_name LIKE '" + ddl_material.SelectedValue + "'";
+            if (txt_tp_vehicle.Text.Trim() != "none")
+                whereclause = whereclause + " AND (tp_time_set_finish BETWEEN '2016-02-01 0:00:00.0000000' AND '2016-02-27 00:00:00.0000000')";
+
+
 
             SqlDataSource_show.SelectCommand = SqlDataSource_show.SelectCommand + whereclause;
             SqlDataSource_show.Select(DataSourceSelectArguments.Empty);

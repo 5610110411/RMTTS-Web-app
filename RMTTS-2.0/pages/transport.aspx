@@ -148,11 +148,11 @@
                                             <asp:ListItem Value="11">พฤศจิกายน</asp:ListItem>
                                             <asp:ListItem Value="12">ธันวาคม</asp:ListItem>
                                         </asp:DropDownList>
-                                        <asp:DropDownList ID="ddl_year_from" runat="server">
+                                        <asp:DropDownList ID="ddl_year_from" runat="server" Width="70px" Height="34px" AppendDataBoundItems="True">
+                                            <asp:ListItem Value="none">--</asp:ListItem>
                                         </asp:DropDownList>
 &nbsp;&nbsp;&nbsp;
-                                        <asp:TextBox ID="txt_tp_year0" runat="server" Height="34px" Width="69px"></asp:TextBox>
-										
+                                        										
 										ถึง<asp:DropDownList ID="DropDownList_Date" runat="server" Width="50px" Height="34px" AppendDataBoundItems="True">
                                             <asp:ListItem Value="none">--</asp:ListItem>
                                             <asp:ListItem>1</asp:ListItem>
@@ -202,7 +202,13 @@
                                             <asp:ListItem Value="11">พฤศจิกายน</asp:ListItem>
                                             <asp:ListItem Value="12">ธันวาคม</asp:ListItem>
                                         </asp:DropDownList>
-                                        <asp:TextBox ID="txt_tp_year" runat="server" Height="34px" Width="69px"></asp:TextBox>
+                                        <asp:DropDownList ID="ddl_year_to" runat="server" Width="70px" Height="34px" AppendDataBoundItems="True">
+                                            <asp:ListItem Value="none">--</asp:ListItem>
+                                        </asp:DropDownList>
+&nbsp;&nbsp;&nbsp;
+                                        <asp:TextBox ID="txt_tp_year" runat="server" Height="34px" Width="0px" >
+                                            
+                                        </asp:TextBox>
                                         <br />
                 
                                         <asp:Button ID="bt_search" class="btn btn-success" runat="server" Text="Search" Height="40px" OnClick="bt_search_Click" />
@@ -223,10 +229,15 @@
                                                 <asp:BoundField DataField="tp_vehicle" HeaderText="ทะเบียนรถ" SortExpression="tp_vehicle" />
                                                 <asp:BoundField DataField="vehicle_number" HeaderText="เลขข้างรถ" SortExpression="vehicle_number" />
                                                 <asp:BoundField DataField="material_name" HeaderText="วัตถุดิบ" SortExpression="material_name" />
-                                                <asp:BoundField DataField="tp_time_set" HeaderText="ส่งวัตถุดิบเข้า" SortExpression="tp_time_set" />
                                                 
 												<asp:BoundField DataField="tp_time_get" HeaderText="รับวัตถุดิบจากแหล่ง" />
                                                 <asp:BoundField DataField="tp_time_get_finish" HeaderText="รับวัตถุดิบเสร็จสิ้น" />
+                                                
+												
+                                                
+                                                
+                                                
+                                                <asp:BoundField DataField="tp_time_set" HeaderText="ส่งวัตถุดิบเข้า" SortExpression="tp_time_set" />
                                                 
 												
                                                 

@@ -103,15 +103,6 @@ namespace RMTTS_2._0.pages {
         protected global::System.Web.UI.WebControls.DropDownList ddl_year_from;
         
         /// <summary>
-        /// txt_tp_year0 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_tp_year0;
-        
-        /// <summary>
         /// DropDownList_Date control.
         /// </summary>
         /// <remarks>
@@ -128,6 +119,15 @@ namespace RMTTS_2._0.pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownList_Month;
+        
+        /// <summary>
+        /// ddl_year_to control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_year_to;
         
         /// <summary>
         /// txt_tp_year control.
