@@ -90,7 +90,10 @@ namespace RMTTS_2._0.pages
                 //whereclause = whereclause + " AND (tp_time_set_finish BETWEEN '2016-02-01 0:00:00.0000000' AND '2016-02-27 00:00:00.0000000')";
                 whereclause = whereclause + " AND (tp_time_set_finish BETWEEN '"+ (int.Parse(ddl_year_from.SelectedValue) - 543).ToString() +"-" + DropDownList_Month0.SelectedValue + "-" + DropDownList_Date0.SelectedValue + " 0:00:00.0000000' AND '" + (int.Parse(ddl_year_to.SelectedValue) - 543).ToString() + "-" + DropDownList_Month.SelectedValue + "-" + DropDownList_Date.SelectedValue + " 23:59:59.0000000')";
             }
-
+            if (ddl_Status.SelectedValue != "none")
+            {
+                whereclause = whereclause + " AND tb_status.status_describe LIKE '" + ddl_Status.SelectedValue + "'";
+            }
             SqlDataSource_show.SelectCommand = SqlDataSource_show.SelectCommand + whereclause;
             SqlDataSource_show.Select(DataSourceSelectArguments.Empty);
 

@@ -40,7 +40,6 @@
 									<a class="mdl-navigation__link" href="transport.aspx">ค้นหาข้อมูล</a>
 									<a class="mdl-navigation__link" href="usermanagement.aspx">จัดการข้อมูลบุคคล</a>
 									<a class="mdl-navigation__link" href="carmanagement.aspx">จัดการข้อมูลรถ</a>
-									<a class="mdl-navigation__link" href="">สอบถาม</a>
 								</nav>
 							</div>
 							<span class="android-mobile-title mdl-layout-title">
@@ -63,11 +62,13 @@
 										    <label>เลขทะเบียนรถ</label>
 										    <asp:TextBox ID="txt_tp_vehicle" runat="server" Height="34px" Width="137px"></asp:TextBox>									
 										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; เดินทางจาก
-										    <asp:DropDownList ID="ddl_station_from" runat="server" DataSourceID="SqlDataSource_station" DataTextField="station_name" DataValueField="station_name" Height="34px" Width="130px">
+										    <asp:DropDownList ID="ddl_station_from" runat="server" DataSourceID="SqlDataSource_station" DataTextField="station_name" DataValueField="station_name" Height="34px" Width="130px" AppendDataBoundItems="True">
+                                                <asp:ListItem Value="none">--- เลือก ---</asp:ListItem>
                                             </asp:DropDownList>
 										    &nbsp;&nbsp;&nbsp;
 										    ไปยัง
-										    <asp:DropDownList ID="ddl_station_to" runat="server" DataSourceID="SqlDataSource_station" DataTextField="station_name" DataValueField="station_name" Height="34px" Width="130px">
+										    <asp:DropDownList ID="ddl_station_to" runat="server" DataSourceID="SqlDataSource_station" DataTextField="station_name" DataValueField="station_name" Height="34px" Width="130px" AppendDataBoundItems="True">
+                                                <asp:ListItem Value="none">--- เลือก ---</asp:ListItem>
                                             </asp:DropDownList>
                                             &nbsp;<br />
 										</div>
@@ -187,8 +188,9 @@
                                         </asp:DropDownList>
                                     
                                      
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; สถานะ <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource_status" DataTextField="status_describe" DataValueField="status_describe" Height="34px" Width="147px">
-                                            </asp:DropDownList>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; สถานะ <asp:DropDownList ID="ddl_Status" runat="server" DataSourceID="SqlDataSource_status" DataTextField="status_describe" DataValueField="status_describe" Height="34px" Width="147px" AppendDataBoundItems="True">
+                                            <asp:ListItem Value="none">--- เลือก ---</asp:ListItem>    
+                                        </asp:DropDownList>
 &nbsp;<br />
 										</div>
 										

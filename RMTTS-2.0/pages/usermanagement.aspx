@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="usermanagement.aspx.cs" Inherits="RMTTS_2._0.pages.usermanagement" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="usermanagement.aspx.cs" Inherits="RMTTS_2._0.pages.usermanagement" MaintainScrollPositionOnPostback="true" %>
 <!doctype html>
 
 <html lang="en">
@@ -39,15 +39,6 @@
 						</span>
 						<!-- Add spacer, to align navigation to the right in desktop -->
 						<div class="android-header-spacer mdl-layout-spacer"></div>
-						<div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
-							<label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
-								<i class="material-icons">search</i>
-							</label>
-							<!-- top bar search -->
-							<div class="mdl-textfield__expandable-holder">
-								<input class="mdl-textfield__input" type="text" id="search-field">
-							</div>
-						</div>
 						<!-- Navigation -->
 						<div class="android-navigation-container">
 							<nav class="android-navigation mdl-navigation">
@@ -55,21 +46,11 @@
 								<a class="mdl-navigation__link" href="transport.aspx">ค้นหาข้อมูล</a>
 								<a class="mdl-navigation__link" href="usermanagement.aspx">จัดการข้อมูลบุคคล</a>
 								<a class="mdl-navigation__link" href="carmanagement.aspx">จัดการข้อมูลรถ</a>
-								<a class="mdl-navigation__link" href="">สอบถาม</a>
 							</nav>
 						</div>
 						<span class="android-mobile-title mdl-layout-title">
 							<img class="android-logo-image" src="../images/scg-logo-white.png">
 						</span>
-						<button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
-							<i class="material-icons">more_vert</i>
-						</button>
-						<ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
-							<li class="mdl-menu__item">5.0 Lollipop</li>
-							<li class="mdl-menu__item">4.4 KitKat</li>
-							<li disabled class="mdl-menu__item">4.3 Jelly Bean</li>
-							<li class="mdl-menu__item">Android History</li>
-						</ul>
 					</div>
 				</div>
 				<!--content section -->

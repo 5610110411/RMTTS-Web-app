@@ -112,14 +112,13 @@ namespace RMTTS_2._0.pages {
         protected global::System.Web.UI.WebControls.DropDownList ddl_year_to;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// ddl_Status control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
-        
+        protected global::System.Web.UI.WebControls.DropDownList ddl_Status;
         
         /// <summary>
         /// bt_search control.

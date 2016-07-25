@@ -22,7 +22,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Android</title>
+    <title>RMTS</title>
 
     <!-- Page styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
@@ -45,22 +45,14 @@
 				</span>
 				<!-- Add spacer, to align navigation to the right in desktop -->
 				<div class="android-header-spacer mdl-layout-spacer"></div>
-				<div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
-					<label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
-						<i class="material-icons">search</i>
-					</label>
-					<!-- top bar search -->
-					<div class="mdl-textfield__expandable-holder">
-						<input class="mdl-textfield__input" type="text" id="search-field">
-					</div>
-				</div>
+				
 				<!-- Navigation -->
 				<div class="android-navigation-container">
 					<nav class="android-navigation mdl-navigation">
 						<a class="mdl-navigation__link" href="RMTTS.aspx">เริ่มต้น</a>
 						<a class="mdl-navigation__link" href="pages/transport.aspx">ค้นหาข้อมูล</a>
-						<a class="mdl-navigation__link" href="#management">จัดการข้อมูล</a>
-						<a class="mdl-navigation__link" href="">สอบถาม</a>
+                        <a class="mdl-navigation__link" href="pages/usermanagement.aspx">จัดการข้อมูลบุคคล</a>
+					    <a class="mdl-navigation__link" href="pages/carmanagement.aspx">จัดการข้อมูลรถ</a>
 					</nav>
 				</div>
 				<span class="android-mobile-title mdl-layout-title">
@@ -126,6 +118,7 @@
         <div class="android-more-section" ID = "management">
 			<div class="android-section-title mdl-typography--display-1-color-contrast">Management</div>
 			<div class="android-card-container mdl-grid">
+                <!--จัดการรายชื่อสถานี
 				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
 					<div class="mdl-card__media">
 						<a href="">
@@ -145,8 +138,9 @@
 						</a>
 					</div>
 				</div>
+                -->
 
-				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+				<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp" style="margin-left: 450px;">
 					<div class="mdl-card__media" >
 						<a href="pages/usermanagement.aspx">
 							<img src="images/user@2x.png">
@@ -166,7 +160,7 @@
 					</div>
 				</div>
 
-				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+				<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
 					<div class="mdl-card__media">
 						<a href="">
 							<img src="images/truck@2x.png">
@@ -185,7 +179,7 @@
 						</a>
 					</div>
 				</div>
-
+                <!--วัตถุดิบ
 				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
 					<div class="mdl-card__media">
 						<a href="pages/usermanagement.aspx">
@@ -204,7 +198,8 @@
 							<i class="material-icons">chevron_right</i>
 						</a>
 					</div>
-				</div>
+				</div> -->
+
 			</div>
 		</div>
 		
@@ -228,36 +223,11 @@
 					</a>
 				</div>
 			</div>
-
 			<div class="mdl-mega-footer--middle-section">
 				<p class="mdl-typography--font-light">Developer: Ninez Manas</p>
 				<p class="mdl-typography--font-light">Some features and devices may not be available in all areas</p>
 			</div>
-
-			<div class="mdl-mega-footer--bottom-section">
-				<a class="android-link android-link-menu mdl-typography--font-light" id="version-dropdown">
-					Versions
-					<i class="material-icons">arrow_drop_up</i>
-				</a>
-				<ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="version-dropdown">
-					<li class="mdl-menu__item">5.0 Lollipop</li>
-					<li class="mdl-menu__item">4.4 KitKat</li>
-					<li class="mdl-menu__item">4.3 Jelly Bean</li>
-					<li class="mdl-menu__item">Android History</li>
-				</ul>
-				<a class="android-link android-link-menu mdl-typography--font-light" id="developers-dropdown">
-					For Developers
-					<i class="material-icons">arrow_drop_up</i>
-				</a>
-				<ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="developers-dropdown">
-					<li class="mdl-menu__item">App developer resources</li>
-					<li class="mdl-menu__item">Android Open Source Project</li>
-					<li class="mdl-menu__item">Android SDK</li>
-					<li class="mdl-menu__item">Android for Work</li>
-				</ul>
-				<a class="android-link mdl-typography--font-light" href="">Blog</a>
-				<a class="android-link mdl-typography--font-light" href="">Privacy Policy</a>
-			</div>
+        </footer>
       </div>
     </div>
     <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
