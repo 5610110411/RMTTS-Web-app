@@ -82,12 +82,13 @@ namespace RMTTS_2._0.pages
             if (ddl_material.SelectedValue != "none")
                 //txt_tp_vehicle.Text = ddl_material.SelectedValue;
                 whereclause = whereclause + " AND tb_materials.material_name LIKE '" + ddl_material.SelectedValue + "'";
-            if (txt_tp_vehicle.Text.Trim() != "none")
+            //if (txt_tp_vehicle.Text.Trim() != "none")
+            if(DropDownList_Date0.SelectedValue != "none" && DropDownList_Month0.SelectedValue != "none" && ddl_year_from.Text != "--" && DropDownList_Date.SelectedValue != "none" && DropDownList_Month.SelectedValue != "none" && ddl_year_to.Text != "--")
             {
                 //int tmp = int.Parse(ddl_year_from.SelectedValue) - 543;
                 //txt_tp_vehicle.Text = tmp.ToString(); ;
                 //whereclause = whereclause + " AND (tp_time_set_finish BETWEEN '2016-02-01 0:00:00.0000000' AND '2016-02-27 00:00:00.0000000')";
-                whereclause = whereclause + " AND (tp_time_set_finish BETWEEN '"+ (int.Parse(ddl_year_from.SelectedValue) - 543).ToString() +"-" + DropDownList_Month0.SelectedValue + "-" + DropDownList_Date0.SelectedValue + " 0:00:00.0000000' AND '" + (int.Parse(ddl_year_to.SelectedValue) - 543).ToString() + "-" + DropDownList_Month.SelectedValue + "-" + DropDownList_Date.SelectedValue + " 00:00:00.0000000')";
+                whereclause = whereclause + " AND (tp_time_set_finish BETWEEN '"+ (int.Parse(ddl_year_from.SelectedValue) - 543).ToString() +"-" + DropDownList_Month0.SelectedValue + "-" + DropDownList_Date0.SelectedValue + " 0:00:00.0000000' AND '" + (int.Parse(ddl_year_to.SelectedValue) - 543).ToString() + "-" + DropDownList_Month.SelectedValue + "-" + DropDownList_Date.SelectedValue + " 23:59:59.0000000')";
             }
 
             SqlDataSource_show.SelectCommand = SqlDataSource_show.SelectCommand + whereclause;
@@ -132,6 +133,12 @@ namespace RMTTS_2._0.pages
         }
 
         protected void SqlDataSource_show_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        {
+
+        }
+
+        
+        protected void DropDownList_Date0_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -31,15 +31,6 @@ namespace RMTTS_2._0.pages {
         protected global::System.Web.UI.WebControls.TextBox txt_tp_vehicle;
         
         /// <summary>
-        /// ddl_material control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_material;
-        
-        /// <summary>
         /// ddl_station_from control.
         /// </summary>
         /// <remarks>
@@ -58,22 +49,13 @@ namespace RMTTS_2._0.pages {
         protected global::System.Web.UI.WebControls.DropDownList ddl_station_to;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// ddl_material control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
-        
-        /// <summary>
-        /// txt_tp_m control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_tp_m;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_material;
         
         /// <summary>
         /// DropDownList_Date0 control.
@@ -130,13 +112,14 @@ namespace RMTTS_2._0.pages {
         protected global::System.Web.UI.WebControls.DropDownList ddl_year_to;
         
         /// <summary>
-        /// txt_tp_year control.
+        /// DropDownList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_tp_year;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        
         
         /// <summary>
         /// bt_search control.
